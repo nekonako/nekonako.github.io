@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "untuk spapsi menggunakan tanda -"
+echo "Masukan slug postingan :" 
+
+read slug
+
+
+touch contents/$slug.md
+mkdir public/assets/artikel/$slug
