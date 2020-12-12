@@ -9,7 +9,7 @@ import {DiscussionEmbed} from "disqus-react"
 
 
 function PostPage(props){
-  const cover = '/assets/artikel/' + props.post.slug + '/cover.png'
+  const cover = '/assets/post/' + props.post.slug + '/cover.png'
 
   const disqusShortname = "nekonako"
   const disqusConfig = {
@@ -26,11 +26,11 @@ function PostPage(props){
         <SideNav />
         <Navbar />
        <div className="relative flex flex-col w-full md:w-2/3">
-            <img src={cover} /> 
+         <img src={cover} className='mt-16 md:mt-0'/> 
           <main className="flex-1 p-6 md:p-8">
                        <div className="md:p-4">
-                            <div className='text-3xl font-bold text-center'>{props.post.title}</div>
-                <div className='px-4'><span dangerouslySetInnerHTML={{ __html: props.post.content }} /></div>
+                         <div className='pb-12 text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
+                <div className='px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} /></div>
               <div className='px-4 pt-8'>
                              <DiscussionEmbed
                   shortname={disqusShortname}
@@ -38,8 +38,8 @@ function PostPage(props){
                 />
               </div>
             </div>
-                <Footer/>
-</main>
+              </main>
+           <Footer/>
          </div>
       
     </>

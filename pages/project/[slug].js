@@ -9,7 +9,7 @@ import {DiscussionEmbed} from "disqus-react"
 
 
 function ProjectPage(props){
-  const cover = '/assets/artikel/' + props.project.slug + '/cover.png'
+  const cover = '/assets/project/' + props.project.slug + '/cover.png'
 
   const disqusShortname = "nekonako"
   const disqusConfig = {
@@ -22,26 +22,26 @@ function ProjectPage(props){
     <>
       <Head>
         <title>Project | {props.project.title}</title>
-      </Head> 
-        <SideNav />
-        <Navbar />
-       <div className="relative flex flex-col w-full md:w-2/3">
-            <img src={cover} /> 
-          <main className="flex-1 p-6 md:p-8">
-                       <div className="md:p-4">
-                            <div className='text-2xl font-bold text-center'>{props.project.title}</div>
-                <div className='px-4'><span dangerouslySetInnerHTML={{ __html: props.project.content }} /></div>
-              <div className='px-4 pt-8'>
-                             <DiscussionEmbed
-                  shortname={disqusShortname}
-                  config={disqusConfig}
-                />
-              </div>
+      </Head>
+      <SideNav />
+      <Navbar />
+      <div className="relative flex flex-col w-full md:w-2/3">
+        <img src={cover} />
+        <main className="flex-1 p-6 md:p-8">
+          <div className="md:p-4">
+            <div className='text-2xl font-bold text-center'>{props.project.title}</div>
+            <div className='px-4'><span dangerouslySetInnerHTML={{ __html: props.project.content }} /></div>
+            <div className='px-4 pt-8'>
+              <DiscussionEmbed
+                shortname={disqusShortname}
+                config={disqusConfig}
+              />
             </div>
-                <Footer/>
-</main>
-         </div>
-      
+          </div>
+        </main>
+        <Footer/>
+      </div>
+
     </>
   )
 }

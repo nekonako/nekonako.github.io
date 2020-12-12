@@ -4,7 +4,7 @@ import tempe from 'tempe'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt,faCode } from '@fortawesome/free-solid-svg-icons'
 
 function IndexPage(props){
   return(
@@ -19,7 +19,7 @@ function IndexPage(props){
              
               {/* get posts data */}
               {props.posts.map((post)=>{
-                const cover = '/assets/artikel/' + post.slug + '/cover.png'
+                const cover = '/assets/post/' + post.slug + '/cover.png'
                 return (
                   <div>
                     <div  key={post.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
@@ -30,17 +30,19 @@ function IndexPage(props){
                               {post.title}
                             </Link>
                           </div>
-                          <div className='flex flex-row pb-2 mb-2 text-secondary postBorder'>
-                            <span className='text-xs text-gray-400'>
+                          <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
+                            <span className='text-xs text-secondary'>
                               <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
                               {tempe(post.date).format("d, DD MMMM YYYY")}
                             </span>
                           </div>
-                          <div className='pb-4'>
+                          <div className='pb-4 text-secondary'>
                             {post.desc}
                           </div>
-                          <span className='px-1 mr-1 text-xs text-gray-900 bg-gray-200 rounded-sm text-bold'>{post.tags}</span>
-                        </div>
+                          {post.tags.map(tag=>(
+ <span className='px-1 mr-1 text-xs text-gray-900 bg-gray-200 rounded-sm text-bold'>{tag}</span>
+                          ))}
+                                                 </div>
                       </div>
                     </div>
                   </div>
@@ -54,30 +56,32 @@ function IndexPage(props){
             <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
               {/* projects data */}
               {props.projects.map((project)=>{
-                const cover = '/assets/artikel/' + project.slug + '/cover.png'
+                const cover = '/assets/project/' + project.slug + '/cover.png'
                 return (
                   <div>
                     <div  key={project.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
+                      <img src={cover} />
                       <div className='p-4'>
                         <div>
                           <div className='text-xl font-extrabold'>
-                            <Link href={`/post/${project.slug}`}>
+                            <Link href={`/project/${project.slug}`}>
                               {project.title}
                             </Link>
                           </div>
-                          <div className='flex flex-row pb-2 mb-2 text-secondary postBorder'>
-                            <span className='text-xs text-gray-400'>
+                          <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
+                            <span className='text-xs text-secondary'>
                               <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
                               {tempe(project.date).format("d, DD MMMM YYYY")}
                             </span>
                           </div>
-                          <div className='pb-4'>
+                          <div className='pb-4 text-secondary'>
                             {project.desc}
                           </div>
-                          <span className='px-1 mr-1 text-xs text-gray-900 uppercase bg-gray-200 rounded-sm text-bold'>
-                            {project.tags}
-                          </span>
-                        </div>
+                          
+                            <a href={project.source}  className='px-2 py-1 rounded-sm bg-accent hover:text-white'>
+                               <FontAwesomeIcon icon={faCode} size='sm'/> Source</a>
+                            </div>
+                                    
                       </div>
                     </div>
                   </div>

@@ -2,25 +2,25 @@
   @apply light;
 }
 
-  .dark {
-    --color-bg-primary : #292D3E;
-    --color-bg-secondary : #25293A;
-    --color-bg-accent : #C792EA;
+.dark {
+  --color-bg-primary : #292D3E;
+  --color-bg-secondary : #25293A;
+  --color-bg-accent : #C792EA;
 
-    --color-text-primary: #e3e3ff;
-    --color-text-secondary: #bfbfeb;
-    --color-text-accent:  #C792EA;
-    --color-text-gray: #52576A;
+  --color-text-primary: #e3e3ff;
+  --color-text-secondary: #bfbfeb;
+  --color-text-accent:  #C792EA;
+  --color-text-gray: #52576A;
 }
 .light {
-    --color-bg-primary :#ffffff;
-    --color-bg-secondary :#ffffff ;
-    --color-bg-accent : #82B1FF;
+  --color-bg-primary :#ffffff;
+  --color-bg-secondary :#ffffff ;
+  --color-bg-accent : #82B1FF;
 
-    --color-text-primary: #686c85;
-    --color-text-secondary: #6e7180;
-    --color-text-accent: #82B1FF;
-    --color-text-gray: #E2E0E0;
+  --color-text-primary: #686c85;
+  --color-text-secondary: #6e7180;
+  --color-text-accent: #82B1FF;
+  --color-text-gray: #E2E0E0;
 }
 
 
@@ -30,27 +30,47 @@
 
 
 @layer base {
-    h1 {
-        @apply text-3xl;
-    }
-    h2 {
-        @apply text-2xl;
-    }
-    h3 {
-        @apply text-xl;
-    }
-    h4 {
-        @apply text-lg;
-    }
-  }
+  h1 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply pt-6;
+    @apply pb-2;
 
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-bold;
+    @apply pt-6;
+    @apply pb-2;
+  }
+  h3 {
+    @apply text-xl;
+    @apply font-bold;
+    @apply pb-2;
+  }
+  h4 {
+    @apply text-lg;
+    @apply font-bold;
+    @apply pb-2;
+  }
+}
+
+.content ul {
+  list-style: disc;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.content a {
+  color: var(--color-text-accent);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@400;700&display=swap');
 
 .font-sans {
- font-family: 'Andika New Basic', sans-serif;
- }
+  font-family: 'Andika New Basic', sans-serif;
+}
 .react-toggle {
   touch-action: pan-x;
 
@@ -113,13 +133,13 @@
   margin-top: auto;
   margin-bottom: auto;
   line-height: 0;
-  
+
   opacity: 0.5;
- }
+}
 
 .react-toggle--checked .react-toggle-track-check {
   opacity: 1;
- }
+}
 
 .react-toggle-track-x {
   position: absolute;
@@ -147,17 +167,17 @@
   height: 22px;
   border: 0px solid ;
   border-radius: 50%;
-  background-color: --var(--color-bg-secondary); 
+  background-color: --var(--color-bg-secondary);
 }
 
 .sidenav {
-  height: 0%; 
-  width: 100%; 
-  position: fixed; 
-  z-index: 0; 
-  top: 0; 
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
   left: 0;
-   overflow: hidden; 
+  overflow: hidden;
   transition: 0.5s;
 }
 
@@ -175,10 +195,10 @@
 }
 
 .sidenav .closebtn {
-   text-decoration: none;
-   }
+  text-decoration: none;
+}
 
-   .footer {
+.footer {
   border-top: 1px solid;
   border-color: var(--color-text-gray);
 }
@@ -189,13 +209,13 @@
 }
 
 .gambar-teman {
-    width: 140px;
-    border: 10px solid;
-    border-radius: 50%;
-    border-color: var(--color-bg-primary);
-    margin-bottom: 1rem;
-    display: inline-block;
-    position: relative;
+  width: 140px;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: var(--color-bg-primary);
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
 }
 
 a:hover {

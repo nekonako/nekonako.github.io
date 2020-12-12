@@ -14,6 +14,11 @@ module.exports = {
         secondary: "var(--color-text-secondary)",
       },
     },
+    listStyleType: {
+      none: 'none',
+      square: 'square',
+      roman: 'upper-roman',
+    },
   },
   variants: {
     extend: {},

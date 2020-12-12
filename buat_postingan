@@ -7,4 +7,4 @@ read slug
 
 
 touch contents/$slug.md
-mkdir public/assets/artikel/$slug
+mkdir public/assets/post/$slug
