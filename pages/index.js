@@ -40,7 +40,7 @@ function IndexPage(props){
                             {post.desc}
                           </div>
                           {post.tags.map(tag=>(
- <span className='px-1 mr-1 text-xs text-gray-900 bg-gray-200 rounded-sm text-bold'>{tag}</span>
+ <span className='px-1 mr-1 text-base text-gray-900 bg-gray-200 rounded-sm text-bold'>{tag}</span>
                           ))}
                                                  </div>
                       </div>
