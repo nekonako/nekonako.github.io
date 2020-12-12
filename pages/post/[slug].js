@@ -30,7 +30,7 @@ function PostPage(props){
           <main className="flex-1 p-6 md:p-8">
                        <div className="md:p-4">
                          <div className='pb-12 text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
-                <div className='px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} /></div>
+                         <div className='px-2 md:px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} /></div>
               <div className='px-4 pt-8'>
                              <DiscussionEmbed
                   shortname={disqusShortname}

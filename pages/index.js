@@ -23,6 +23,7 @@ function IndexPage(props){
                 return (
                   <div>
                     <div  key={post.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
+                       <img src={cover} />
                       <div className='p-4'>
                         <div>
                           <div className='text-2xl font-extrabold'>
