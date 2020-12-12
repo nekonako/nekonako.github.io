@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['./components/**/*.{js}','./pages/**/*.{js}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -13,11 +13,6 @@ module.exports = {
         primary: "var(--color-text-primary)",
         secondary: "var(--color-text-secondary)",
       },
-    },
-    listStyleType: {
-      none: 'none',
-      square: 'square',
-      roman: 'upper-roman',
     },
   },
   variants: {
