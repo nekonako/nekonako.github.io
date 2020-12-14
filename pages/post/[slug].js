@@ -39,7 +39,15 @@ function PostPage(props){
                 <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
                 
               ))}</div>
-            </div>
+              <div className='flex flex-row mt-8'>
+                <img src="https://avatars.githubusercontent.com/u/46141275" width="80px" 
+                className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}}/>
+                <div className='flex flex-col pt-2 pl-4'>
+                  <div className='text-xl font-bold'>Penulis</div>
+                  Galih Wisnuaji
+                  </div>
+                </div>
+                </div>
             <div className='pt-8'>
               <DiscussionEmbed
                 shortname={disqusShortname}
