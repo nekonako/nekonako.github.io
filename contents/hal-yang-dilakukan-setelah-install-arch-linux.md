@@ -114,18 +114,19 @@ sudo nano /etc/slim.conf
 sudo systemctl enable slim.service
 ```
 
-untuk konfigurasi dasar kita cukup uncomment bagian session dir
+untuk konfigurasi dasar kita cukup uncomment bagian sessiondir
 
 ```bash
 # Set directory that contains the xsessions.
 # slim reads xsesion from this directory, and be able to select.
 sessiondir            /usr/share/xsessions/
 ```
-secara otomatis slim akan membaca daftar session yang ada di directory tersebut, karena kita menginstall openbox di directory 
-`/usr/share/xsessions/` harusnya ada file `openbox-session`.Jika kita mempunyai lebih dari satu session untuk memilih session mana
-yang kita ambil bisa menggunakan tombol f1.
+secara otomatis slim akan membaca daftar session yang ada di directory tersebut, karena kita sudah menginstall openbox, maka di directory 
+`/usr/share/xsessions/` harusnya ada file `openbox-session`.
 
-Setelah selesai konfigurasi slim mari kita reboot.Harusnya kita sudah bisa masuk ke desktop kita.
+Jika kita mempunyai lebih dari satu session untuk memilih session mana yang kita ambil bisa menggunakan tombol f1.
+
+Setelah selesai konfigurasi slim mari kita reboot.Harusnya kita sudah bisa masuk ke desktop.
 
 ## Konfigurasi sudo
 
@@ -138,9 +139,10 @@ nano /etc/sudoers
 ## Konfigurasi openbox
 
 openbox mempunyai 3 file konfigurasi yaitu :
-**autostart** berisi aplikasi yang akan otomatis berjalan ketika masuk ke openbox.
-**menu.xml** berisi item yang akan tampil ketika kita menekan klik kanan.
-**rc.xml** adalah file konfigurasi utama openbox, didalamnya ada banyak konfigurasi seperti font,titlebar,shortcut,mousebind dan lain-lain.
+
+- **autostart** berisi aplikasi yang akan otomatis berjalan ketika masuk ke openbox.
+- **menu.xml** berisi item yang akan tampil ketika kita menekan klik kanan.
+- **rc.xml** adalah file konfigurasi utama openbox, didalamnya ada banyak konfigurasi seperti font, titlebar, shortcut, mousebind dan lain-lain.
 
 Secara default openbox hanya menyediakan global konfigurasi yang berada di `/etc/xdg/openbox`, untuk membuat konfigurasi lokal kita perlu
 menyalinya ke directory `~/.config/openbox`
