@@ -49,7 +49,7 @@ function Friends(){
               <>
                               <div className='inline-block'>
                   <a href={friend.url} className='inline-block m-4 font-bold'>
-                    <img src={friend.avatar} className='w-32 md:w-36 gambar-teman' />
+                    <img src={friend.avatar} className='w-32 gambar-teman' />
                     <br/>{friend.name}</a>
                 </div>
               </>

@@ -20,15 +20,15 @@ function MyApp({ Component, pageProps }) {
         <meta name='format-detection' content='telephone=no' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta name='msapplication-config' content='/static/icons/browserconfig.xml' />
-        <meta name='msapplication-TileColor' content='#292D3E' />
+        <meta name='msapplication-TileColor' content='#25293A' />
         <meta name='msapplication-tap-highlight' content='no' />
-        <meta name='theme-color' content='#292D3E' />
+        <meta name='theme-color' content='#25293A' />
 
         <link rel='apple-touch-icon' sizes='180x180' href='/assets/icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/assets/icon.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/assets/icon.png' />
         <link rel='manifest' href='/manifest.json' />
-        <link rel='mask-icon' href='/assets/icon.png' color='#292D3E' />
+        <link rel='mask-icon' href='/assets/icon.png' color='#25293A' />
         <link rel='shortcut icon' href='/static/icons/safari-pinned-tab.svg' />
         <meta name='twitter:card' content='Hey! there' />
         <meta name='twitter:url' content='https://nekonako.me' />

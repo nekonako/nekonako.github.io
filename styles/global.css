@@ -53,6 +53,9 @@
     @apply font-bold;
     @apply pb-2;
   }
+  strong {
+    @apply font-bold;
+  }
 }
 
 .content ul {

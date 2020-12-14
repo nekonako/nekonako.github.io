@@ -20,7 +20,7 @@ function SideNav(){
               <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="150px" className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"8px"}}/>
             </div>
             <div className="text-3xl font-bold text-center latin">Galih wisnuaji</div>
-            <div className="font-light text-center latin">Self thought web develooping</div>
+            <div className="font-light text-center latin">Peternak penguin</div>
 
             <ul className="pt-8 pb-4 text-center ">
               <li className="p-2">
