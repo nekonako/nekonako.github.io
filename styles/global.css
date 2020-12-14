@@ -60,7 +60,7 @@
 
 .content ul {
   list-style: disc;
-  margin-left: 1rem;
+  margin-left: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -236,10 +236,9 @@ pre {
    border-color:  var(--color-text-accent);
    margin-top: 1rem !important;
    margin-top: 1rem !important;
-
 }
 code {
-    color:  #5F6EAD;
+    color:  var(--color-text-accent);
 }
 
 pre code {
@@ -247,4 +246,13 @@ pre code {
   color: var(--color-text-secondary);
   white-space: pre;
   font-weight: normal !important;
+ }
+
+ blockquote {
+   border-left: 5px solid;
+   border-color: var(--color-text-accent);
+   background-color: var(--color-text-gray);
+  padding: 1rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
  }
