@@ -131,7 +131,7 @@ Setelah selesai konfigurasi slim mari kita reboot.Harusnya kita sudah bisa masuk
 
 ```bash
 nano /etc/sudoers
-// lalu tambahkan konfigurasi berikut
+# lalu tambahkan konfigurasi berikut
 %wheel ALL = ALL ALL
 ```
 
