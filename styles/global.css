@@ -232,7 +232,10 @@ a:hover {
   color: var(--color-text-accent)
 }
 pre {
-  border-radius: 5px;
+   border-top: 5px solid;
+   border-color:  var(--color-text-accent);
+   margin-top: 2rem !important;
+
 }
 code {
     color:  #5F6EAD;
@@ -243,4 +246,4 @@ pre code {
   color: var(--color-text-secondary);
   white-space: pre;
   font-weight: normal !important;
-}
+ }

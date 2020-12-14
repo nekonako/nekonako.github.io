@@ -35,7 +35,7 @@ code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
 code[class*="language-"]::mozselection {
   text-shadow: none;
-  background: #181824;
+  background: #25263A;
 }
 @media print {
   pre[class*="language-"],
@@ -47,7 +47,7 @@ pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  background: #25293A;
+  background: #25263A;
 }
 :not(pre) > code[class*="language-"] {
   padding: 0.1em 0.3em;
