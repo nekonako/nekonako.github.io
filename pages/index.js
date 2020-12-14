@@ -20,14 +20,14 @@ function IndexPage(props){
         <main className="flex-1">
           <div className="px-2 py-1 mt-20 md:m-8">
             <div className='my-4 mt-10 text-2xl font-bold'>Articles</div>
-            <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+            <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 gap-4 lg:grid-cols-3">
 
               {/* get posts data */}
               {props.posts.map((post)=>{
                 const cover = '/assets/post/' + post.slug + '/cover.png'
                 return (
                   <div>
-                    <div  key={post.id} className='m-2 mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>                 
+                    <div  key={post.id} className='mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>                 
                       <div className='p-4'>
                         <div>
                           <div className='text-xl font-extrabold'>

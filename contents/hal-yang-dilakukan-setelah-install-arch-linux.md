@@ -34,7 +34,7 @@ pacman -S xorg-server
 ## Window Manager
 Untuk bisa menjalankan aplikasi berbasis GUI, tidak cukup hanya dengan display server seperti xorg, kita juga butuh sebuah aplikasi
 yang bertugas untuk menyediakan **window** bagi aplikasi yang akan kita jalankan.Aplikasi tersebut bernama Window Manager.Window biasanya
-sudah menjadi satu paket dengan Desktop Environment seperti GNOME,XFCE,MATE,KDE dll.
+sudah menjadi satu paket dengan Desktop Environment seperti gnome,xfce,mate,kde dll.
 
 karena saya ingin system yang say gunakan seminimalis
 mungkin saya lebih memilih window manager yang bisa berdiri sendiri atau independen, contohnya seperti openbox,dwm,bspwm,i3wm dll.
@@ -55,6 +55,8 @@ Ada banyak macam display manager, saya sendiri lebih menyukai slim.
 ```
 sudo pacman -S slim
 ```
+
+<br/>
 
 ### Konfigurasi slim
 File konfigurasi slim berada di `/etc/slim.conf`, jadi mari kita buka file tersebut.

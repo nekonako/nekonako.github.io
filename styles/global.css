@@ -75,6 +75,13 @@
     content: "# ";
     }
 
+@font-face {
+  font-family: 'pragmata';
+  src: url('/assets/fonts/PragmataProR_liga_0828.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@400;700&display=swap');
 
@@ -239,7 +246,7 @@ code {
 }
 
 pre code {
-  font-family: monospace;
+  font-family: 'Pragmata';
   color: var(--color-text-secondary);
   white-space: pre;
   font-weight: normal !important;
