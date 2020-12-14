@@ -83,9 +83,7 @@ pacman -S sudo
 ## Konfigurasi sudo
 ```bash
 nano /etc/sudoers
-
 // lalu tambahkan konfigurasi berikut
-
 %wheel ALL = ALL ALL
 ```
 

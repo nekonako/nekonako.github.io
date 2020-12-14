@@ -239,7 +239,7 @@ code {
 }
 
 pre code {
-  font-family: 'pragmata';
+  font-family: monospace;
   color: var(--color-text-secondary);
   white-space: pre;
   font-weight: normal !important;
