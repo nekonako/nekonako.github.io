@@ -41,8 +41,7 @@ function MyApp({ Component, pageProps }) {
         <meta property='og:description' content='Nako personal website' />
         <meta property='og:site_name' content='nekonako' />
         <meta property='og:url' content='https://nekonako.me' />
-        <meta property='og:image' content='/assets/icon.png' />
-      </Head>
+             </Head>
       <ThemeProvider>
         <div className="flex flex-col h-full min-h-screen font-sans text-base antialiased bg-primary text-primary transition-all duration-300 md:flex-row">
           <Component {...pageProps} />

@@ -12,6 +12,8 @@ function About() {
     <>
       <Head>
         <title>About | Nekonako</title>
+        <meta data-hid="og:image" property="og:image" content="/assets/nako.jpg"/>
+         <meta property='og:image' content="/assets/nako.jpg" />
         </Head>
               <Navbar />
           <SideNav/>

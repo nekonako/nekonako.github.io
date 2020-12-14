@@ -23,6 +23,7 @@ function ProjectPage(props){
       <Head>
         <title>Project | {props.project.title}</title>
         <meta data-hid="og:image" property="og:image" content={cover} />
+         <meta property='og:image' content={cover} />
       </Head>
       <SideNav />
       <Navbar />
