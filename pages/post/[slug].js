@@ -17,6 +17,7 @@ function PostPage(props){
     identifier: props.post.id,
     title: props.post.title
   }
+  
 
   return (
     <>
@@ -40,7 +41,7 @@ function PostPage(props){
                 
               ))}</div>
               <div className='flex flex-row mt-8'>
-                <img src="https://avatars.githubusercontent.com/u/46141275" width="80px" 
+                <img src="https://avatars.githubusercontent.com/u/46141275" width="70px" 
                 className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}}/>
                 <div className='flex flex-col pt-2 pl-4'>
                   <div className='text-xl font-bold'>Penulis</div>
