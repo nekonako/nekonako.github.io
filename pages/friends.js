@@ -29,7 +29,7 @@ const friends = [
     name : "Widi",
     avatar : "https://avatars0.githubusercontent.com/u/54144923",
     url: "https://technisekai.github.io"
-  }, 
+  },
 ]
 
 function Friends(){
@@ -40,22 +40,26 @@ function Friends(){
       </Head>
       <Navbar />
       <SideNav/>
-       <div className="relative flex flex-col w-full md:w-2/3">
-         <div className='flex-1 p-8 text-center'>
-                          {friends.map((friend)=> {
-          return (
-            <>
-              <div className='inline-block'>
-                <a href={friend.url} className='inline-block m-4 font-bold'>
-                  <img src={friend.avatar} className='gambar-teman' />
-                  <br/>{friend.name}</a>
-              </div>
-            </>
-          )
-        })} 
-           </div>
-         </div>
-                   </>
+      <div className="relative flex flex-col w-full md:w-2/3">
+        <div className='flex-1 mt-20 text-center md:p-8 md:mt-0'>
+            <div className='my-8 text-xl font-bold'>Friendlist</div>
+          
+          {friends.map((friend)=> {
+            return (
+              <>
+                              <div className='inline-block'>
+                  <a href={friend.url} className='inline-block m-4 font-bold'>
+                    <img src={friend.avatar} className='w-32 md:w-36 gambar-teman' />
+                    <br/>{friend.name}</a>
+                </div>
+              </>
+            )
+          })}
+                  </div>
+        <Footer />
+
+      </div>
+    </>
   )
 }
 export default Friends

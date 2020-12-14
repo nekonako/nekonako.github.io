@@ -11,7 +11,7 @@ import {DiscussionEmbed} from "disqus-react"
 function PostPage(props){
   const cover = '/assets/post/' + props.post.slug + '/cover.png'
 
-  const disqusShortname = "nekonako"
+  const disqusShortname = "harutcha"
   const disqusConfig = {
     url: "https://nekonako.me/post/"+props.post.slug,
     identifier: props.post.id,
@@ -30,15 +30,15 @@ function PostPage(props){
         <main className="flex-1 p-6 md:p-8">
           <div className="md:p-4">
             <div className='text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
-            <div className='py-2 text-sm text-center'>{props.post.desc}</div>
+            <div className='py-2 text-sm text-center'># {props.post.desc} #</div>
             <div className='text-sm text-center'>{tempe(props.post.date).format("dd, DD MMMM YYYY")}</div>
-            <div className='mt-12 md:px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
+            <div className='mt-12 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
               <div className='pt-12'>{props.post.tags.map(tag=>(
                 <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
                 
               ))}</div>
             </div>
-            <div className='px-4 pt-8'>
+            <div className='pt-8'>
               <DiscussionEmbed
                 shortname={disqusShortname}
                 config={disqusConfig}
