@@ -231,3 +231,16 @@
 a:hover {
   color: var(--color-text-accent)
 }
+pre {
+  border-radius: 5px;
+}
+code {
+    color:  #5F6EAD;
+}
+
+pre code {
+  font-family: 'pragmata';
+  color: var(--color-text-secondary);
+  white-space: pre;
+  font-weight: normal !important;
+}
