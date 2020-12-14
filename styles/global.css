@@ -234,7 +234,8 @@ a:hover {
 pre {
    border-top: 5px solid;
    border-color:  var(--color-text-accent);
-   margin-top: 2rem !important;
+   margin-top: 1rem !important;
+   margin-top: 1rem !important;
 
 }
 code {

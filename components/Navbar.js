@@ -32,7 +32,7 @@ function Navbar() {
         <div id="sideNav" className="flex flex-col justify-center inline-block w-full mt-16 text-center bg-primary sidenav">
           <div className="sidenav-content">
             <Link href="/" className="font-bold">Home</Link>
-            <Link href="/blog" className="font-bold">Articles</Link>
+            <Link href="/posts" className="font-bold">Articles</Link>
             <Link href="/friends" className="font-bold">friends</Link>
             <Link href="/about" className="font-bold">About</Link>
 

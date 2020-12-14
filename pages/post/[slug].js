@@ -22,6 +22,7 @@ function PostPage(props){
     <>
       <Head>
         <title>Artikel | {props.post.title}</title>
+        <meta data-hid="og:image" property="og:image" content={cover} />
       </Head>
       <SideNav />
       <Navbar />

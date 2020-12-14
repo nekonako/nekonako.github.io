@@ -13,6 +13,7 @@ function IndexPage(props){
     <>
       <Head>
         <title>Home | {siteData.name}</title>
+        <meta data-hid="og:image" property="og:image" content="https://avatars.githubusercontent.com/u/46141275"/>
       </Head>
       <Navbar />
       <SideNav />

@@ -62,7 +62,7 @@ sudo pacman -S slim
 File konfigurasi slim berada di `/etc/slim.conf`, jadi mari kita buka file tersebut.
 
 ```bash
-sudo /etc/slim.conf
+sudo nano /etc/slim.conf
 ```
 
 untuk konfigurasi dasar kita cukup uncomment bagian session dir

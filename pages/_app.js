@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <meta name='application-name' content='nekonako' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-        <meta name='apple-mobile-web-app-title' content='Nako Notes' />
+        <meta name='apple-mobile-web-app-title' content='Nekonako' />
         <meta name='description' content='Nako Personal Website' />
         <meta name='format-detection' content='telephone=no' />
         <meta name='mobile-web-app-capable' content='yes' />
@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
         <meta name='twitter:image' content='/assets/icon.png' />
         <meta name='twitter:creator' content='@Galih_wisnuA' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='neko notes' />
-        <meta property='og:description' content='nako personal website' />
+        <meta property='og:title' content='nekonako' />
+        <meta property='og:description' content='Nako personal website' />
         <meta property='og:site_name' content='nekonako' />
         <meta property='og:url' content='https://nekonako.me' />
         <meta property='og:image' content='/assets/icon.png' />
