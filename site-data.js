@@ -1,5 +1,5 @@
 module.exports = {
-  name : 'Nako Notes',
+  name : 'Nekonako',
   baseUrl : '/',
   logo : '/assets/icon.png',
   description : `Nako Personal Website.`,

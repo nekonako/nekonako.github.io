@@ -26,11 +26,11 @@ function ProjectPage(props){
       <SideNav />
       <Navbar />
       <div className="relative flex flex-col w-full md:w-2/3">
-        <img src={cover} />
+        <img src={cover} className='mt-16 md:mt-0'/>
         <main className="flex-1 p-6 md:p-8">
           <div className="md:p-4">
             <div className='text-2xl font-bold text-center'>{props.project.title}</div>
-            <div className='px-4'><span dangerouslySetInnerHTML={{ __html: props.project.content }} /></div>
+            <div className='md:px-4 content'><span dangerouslySetInnerHTML={{ __html: props.project.content }} /></div>
             <div className='px-4 pt-8'>
               <DiscussionEmbed
                 shortname={disqusShortname}

@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SideNav from "../components/SideNav"
+import Head from 'next/head'
 
 const friends = [
   {
@@ -28,36 +29,33 @@ const friends = [
     name : "Widi",
     avatar : "https://avatars0.githubusercontent.com/u/54144923",
     url: "https://technisekai.github.io"
-  }
+  }, 
 ]
 
 function Friends(){
   return (
     <>
+      <Head>
+        <title>Friends | Nekonako </title>
+      </Head>
       <Navbar />
       <SideNav/>
-      <div className="relative flex w-full min-h-screen md:w-2/3">
-        <main className="flex-1">
-          <div className="px-2 py-1 mt-20 text-center md:m-8">
-            <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
-              {friends.map((friend)=> {
-                return (
-                  <>
-                    <div className='mb-4'>
-                      <a href={friend.url} className='font-bold'>
-                        <img src={friend.avatar} className='gambar-teman border-current' />
-                        <br/>{friend.name}</a>
-                    </div>
-                  </>
-                )
-              })}
-            </div>
-
-          </div>
-          <Footer />
-        </main>
-      </div>
-    </>
+       <div className="relative flex flex-col w-full md:w-2/3">
+         <div className='flex-1 p-8 text-center'>
+                          {friends.map((friend)=> {
+          return (
+            <>
+              <div className='inline-block'>
+                <a href={friend.url} className='inline-block m-4 font-bold'>
+                  <img src={friend.avatar} className='gambar-teman' />
+                  <br/>{friend.name}</a>
+              </div>
+            </>
+          )
+        })} 
+           </div>
+         </div>
+                   </>
   )
 }
 export default Friends

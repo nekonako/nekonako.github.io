@@ -10,7 +10,7 @@ library.add(fab)
 function SideNav(){
   return(
     <>
-      <div className="z-10 invisible hidden w-1/3 bg-secondary md:visible md:inline-block" style={{borderRight:'2px solid rgba(0, 0, 0, 0.05)'}}>
+      <div className="z-10 invisible hidden w-1/3 bg-secondary md:visible md:inline-block" style={{borderRight:'1px solid var(--color-text-gray)',borderColor:'text-gray'}}>
         <div className="sticky top-0 left-0 flex flex-col justify-center min-h-screen">
             <div className="absolute top-0 left-0 inline-block m-4 text-lg text-center shadow-lg bg-secondary rounded-md">
       <ThemeToggle />

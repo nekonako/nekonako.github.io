@@ -20,11 +20,11 @@ function Navbar() {
   return (
     <>
       <div id="navbar" className="fixed z-10 flex-row w-full align-middle md:hidden lg:hidden xl:hidden ">
-        <div className="flex items-center justify-between h-16 px-6 postBorder text-primary bg-primary">
+        <div className="flex items-center justify-between h-16 px-6 postBorder bg-secondary">
           <a href="https://github.com/nekonako">
             <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="32px" className="border-2 rounded-full text-accent border-current"/>
           </a>
-          <Link href="/" ><span className="text-2xl font-bold">Nako</span></Link>
+          <span className="text-2xl font-bold"><Link href="/" >Nekonako</Link></span>
           <a onClick={openNav} className="md:hidden" data-target="navMenu">
             <i className="font-bold"><FontAwesomeIcon icon={faBars}/></i>
           </a>

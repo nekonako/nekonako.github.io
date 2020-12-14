@@ -1,14 +1,14 @@
 ---
-title : 'From gatsby to nextjs'
+title : 'Dari Gatsby ke Nextjs'
 slug : 'how-i-rebuild-this-site-from-gatsby-to-nextsjs'
 date : '2020-12-11'
-desc: 'how i rebuild this site from gatsby to nextjs'
+desc: 'Membangun ulang blog ini dengan nextjs'
 tags:
   - nextjs
   - react
 ---
 
-## mengapa saya membangun ulang website ini
+## Mengapa saya membangun ulang website ini
 Belum lama ini saya sedang belajar reactjs, dan tentu pada saat belajar kita ingin membuat project sesuai dengan apa yang sedang
 kita pelajari.project yang sering kita buat adalah membuat blog pribadi.
 Sebelumnya saya sudah membuat blog ini dengan gatsby. gatsby sendiri adalah static site generator (SSG) berbasis reactjs.
@@ -17,25 +17,23 @@ Terlepas dari segala kelebihan yang diberikan oleh graphql, saya masih kesulitan
 Oleh karena itu saya memutuskan untuk pindah ke nextjs, tentu bukan berarti saya menyerah dengan graphql mungkin pada kesempatan 
 berikutnya saya akan mencobanya lagi.
 
-## apa itu nextjs
+## Apa itu nextjs
 dalam website nextjs sendiri, nextjs adalah framework reactjs untuk production. apa maksudnya ? nextjs memberikan semua fitur yang kita 
 butuhkan dalam mendevelop sebuah aplikasi sampai level production.
 
 ## Kelebihan nextjs
-emang apa kelebihanya dibanding framework lain ? maksudnya siap untuk production kan fitur standar yang harus ada dalam sebuah framework.
-kalo gitu doang biasa aja dong.
+Salah satu kelebihan nextjs yang paling menarik adalah fitur hybrid renderingnya. nexyjs bisa menggunakan SSR maupun CSR atau bahkan 
+mengkombinasikan keduanya.Untuk fitur lainya menurut saya hampir mirip dengan gatsby. berikut adalah beberapa fitur nextjs.
 
-- hybris rendering (bisa CSR dan SSR)
+- hybris rendering 
 - support typescript
 - nol config
 - fast refresh
 - file-system routing
 - built-in css support
-
-dan masih banyak lagi, untuk lebih detail bisa dilihat di [nextjs.org](https://nextjs.org).
-fitur yang menurut saya paling menarik adalah hybrid renderingnya.
+- dll.
 
-## apa bedanya dengan gatsby
+## Apa bedanya dengan gatsby
 nextjs dan gatsby sama-sama menggunakan react, tapi keduanya berbeda. gatsby adalah static site generator sedangkan next adalah reactjs
 framework.gatsby menggunkan client side rendering sedangkan nextjs bisa keduanya ( client side dan server side ).untuk fitur lainya
 menurut saya keduanya hampir sama.
@@ -60,18 +58,18 @@ otomatis dijadikan routing jadi kita tidak perlu membuat konfigurasi routing lag
 
 ### Plugin yang saya gunkana
 
-#### styling
+#### 1. styling
 saya menggunkan tailwindcss untuk styling. tailwind sendiri adalah framework css yang sangat fleksibel dan mudah dicustomize.
 
 <br/>
 
-#### Markdown
+#### 2. Markdown
 karena artikel kita bentuknya markdown kita perlu sesuatu untuk merender markdown tersebut.
 untuk masalah itu saya menggunakan `remark-parse dan remark-html`, untuk metadata saya menggunkan `gray-matter`.
 
 <br/>
 
-#### Syntax Highlighting
+#### 3. Syntax Highlighting
 pada saat menulis artikel tentang kadang kita harus menampilkan source kode.untuk mempercantik tampilan source code tersebut
 kita membutuhkan syntax highlighting.untuk masalah itu saya menggunkan prismjs.
 

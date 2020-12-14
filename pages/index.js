@@ -1,32 +1,37 @@
 import SideNav from '../components/SideNav'
+import Head from 'next/head'
 import Link from 'next/link'
 import tempe from 'tempe'
+import siteData from '../site-data'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt,faCode } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt,faFileCode } from '@fortawesome/free-solid-svg-icons'
 
 function IndexPage(props){
   return(
     <>
+      <Head>
+        <title>Home | {siteData.name}</title>
+      </Head>
       <Navbar />
       <SideNav />
       <div className="relative flex w-full min-h-screen md:w-2/3">
         <main className="flex-1">
           <div className="px-2 py-1 mt-20 md:m-8">
-            <div className='my-4 mt-12 text-xl'>Articles</div>
+            <div className='my-4 mt-10 text-2xl font-bold'>Articles</div>
             <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
-             
+
               {/* get posts data */}
               {props.posts.map((post)=>{
                 const cover = '/assets/post/' + post.slug + '/cover.png'
                 return (
                   <div>
                     <div  key={post.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
-                       <img src={cover} />
+                      <img src={cover} />
                       <div className='p-4'>
                         <div>
-                          <div className='text-2xl font-extrabold'>
+                          <div className='text-xl font-extrabold'>
                             <Link href={`/post/${post.slug}`}>
                               {post.title}
                             </Link>
@@ -41,9 +46,9 @@ function IndexPage(props){
                             {post.desc}
                           </div>
                           {post.tags.map(tag=>(
- <span className='px-1 mr-1 text-base text-gray-900 bg-gray-200 rounded-sm text-bold'>{tag}</span>
+                            <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
                           ))}
-                                                 </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -53,7 +58,7 @@ function IndexPage(props){
             </div>
 
             {/* get project data */}
-            <div className='my-4 mt-12 text-xl'>Projects</div>
+            <div className='my-4 mt-12 text-2xl font-bold'>Projects</div>
             <div className="relative left-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
               {/* projects data */}
               {props.projects.map((project)=>{
@@ -78,11 +83,11 @@ function IndexPage(props){
                           <div className='pb-4 text-secondary'>
                             {project.desc}
                           </div>
-                          
-                            <a href={project.source}  className='px-2 py-1 rounded-sm bg-accent hover:text-white'>
-                               <FontAwesomeIcon icon={faCode} size='sm'/> Source</a>
-                            </div>
-                                    
+
+                          <a href={project.source}  className='px-2 pb-1 text-gray-200 rounded-sm bg-accent'>
+                            <FontAwesomeIcon icon={faFileCode} /> Source</a>
+                        </div>
+
                       </div>
                     </div>
                   </div>

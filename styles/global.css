@@ -64,12 +64,20 @@
 .content a {
   color: var(--color-text-accent);
 }
+.content h2::before {
+  content: "# ";
+  color: var(--color-text-accent);
+ }
+ .content h3::before{
+    content: "# ";
+    }
 
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@400;700&display=swap');
 
 .font-sans {
   font-family: 'Andika New Basic', sans-serif;
+  font-weight: 300;
 }
 .react-toggle {
   touch-action: pan-x;
@@ -210,9 +218,9 @@
 
 .gambar-teman {
   width: 140px;
-  border: 10px solid;
+  border: 3px solid;
   border-radius: 50%;
-  border-color: var(--color-bg-primary);
+  border-color: var(--color-bg-accent);
   margin-bottom: 1rem;
   display: inline-block;
   position: relative;

@@ -4,11 +4,15 @@ import Navbar from "../components/Navbar"
 import SideNav from "../components/SideNav"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import Head from 'next/head'
 
 
 function About() {
   return (
     <>
+      <Head>
+        <title>About | Nekonako</title>
+        </Head>
               <Navbar />
           <SideNav/>
           <div className="relative flex w-full min-h-screen md:w-2/3">
@@ -56,9 +60,7 @@ function About() {
                   Get in touch</div>
                 Galih wisnuaji
                 <br/>
-                Self thought web developing
-                <br/>
-                <a href="mailto:code.yuune@gmail.com" rel="external noopener">code.yuune@gmail.com</a>
+               <a href="mailto:code.yuune@gmail.com" rel="external noopener">ne.nekonako@gmail.com</a>
               </div>
               <Footer />
             </main>

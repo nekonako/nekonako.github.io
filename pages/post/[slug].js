@@ -22,26 +22,33 @@ function PostPage(props){
     <>
       <Head>
         <title>Artikel | {props.post.title}</title>
-      </Head> 
-        <SideNav />
-        <Navbar />
-       <div className="relative flex flex-col w-full md:w-2/3">
-         <img src={cover} className='mt-16 md:mt-0'/> 
-          <main className="flex-1 p-6 md:p-8">
-                       <div className="md:p-4">
-                         <div className='pb-12 text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
-                         <div className='px-2 md:px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} /></div>
-              <div className='px-4 pt-8'>
-                             <DiscussionEmbed
-                  shortname={disqusShortname}
-                  config={disqusConfig}
-                />
-              </div>
+      </Head>
+      <SideNav />
+      <Navbar />
+      <div className="relative flex flex-col w-full md:w-2/3">
+        <img src={cover} className='mt-16 md:mt-0'/>
+        <main className="flex-1 p-6 md:p-8">
+          <div className="md:p-4">
+            <div className='text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
+            <div className='py-2 text-sm text-center'>{props.post.desc}</div>
+            <div className='text-sm text-center'>{tempe(props.post.date).format("dd, DD MMMM YYYY")}</div>
+            <div className='mt-12 md:px-4 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
+              <div className='pt-12'>{props.post.tags.map(tag=>(
+                <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
+                
+              ))}</div>
             </div>
-              </main>
-           <Footer/>
-         </div>
-      
+            <div className='px-4 pt-8'>
+              <DiscussionEmbed
+                shortname={disqusShortname}
+                config={disqusConfig}
+              />
+            </div>
+          </div>
+        </main>
+        <Footer/>
+      </div>
+
     </>
   )
 }
