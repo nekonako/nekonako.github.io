@@ -28,7 +28,7 @@ function ProjectPage(props){
       <SideNav />
       <Navbar />
       <div className="relative flex flex-col w-full md:w-2/3">
-        <img src={cover} className='mt-16 md:mt-0'/>
+        <img src={cover} className='mt-16 md:mt-0' alt={props.post.title}/>
         <main className="flex-1 p-6 md:p-8">
           <div className="md:p-4">
             <div className='text-2xl font-bold text-center'>{props.project.title}</div>

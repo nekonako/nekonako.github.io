@@ -38,18 +38,17 @@ function Friends(){
       <Head>
         <title>Friends | Nekonako </title>
         <meta data-hid="og:image" property="og:image" content="/assets/nako.jpg"/>
-         <meta property='og:image' content="/assets/nako.jpg" />
+        <meta property='og:image' content="/assets/nako.jpg" />
       </Head>
       <Navbar />
       <SideNav/>
       <div className="relative flex flex-col w-full md:w-2/3">
         <div className='flex-1 mt-20 text-center md:p-8 md:mt-0'>
-            <div className='my-8 text-xl font-bold'>Friendlist</div>
-          
+          <div className='my-8 text-xl font-bold'>Friendlist</div>
           {friends.map((friend)=> {
             return (
               <>
-                              <div className='inline-block'>
+                <div className='inline-block'>
                   <a href={friend.url} className='inline-block m-4 font-bold'>
                     <img src={friend.avatar} className='w-32 gambar-teman' />
                     <br/>{friend.name}</a>
@@ -57,9 +56,8 @@ function Friends(){
               </>
             )
           })}
-                  </div>
+        </div>
         <Footer />
-
       </div>
     </>
   )

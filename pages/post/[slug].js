@@ -29,7 +29,7 @@ function PostPage(props){
       <SideNav />
       <Navbar />
       <div className="relative flex flex-col w-full md:w-2/3">
-        <img src={cover} className='w-full mt-16 md:mt-0'/>
+        <img src={cover} className='w-full mt-16 md:mt-0' alt={props.post.title}/>
         <main className="flex-1 p-6 md:p-8">
           <div className="md:p-4">
             <div className='text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
@@ -42,7 +42,7 @@ function PostPage(props){
               ))}</div>
               <div className='flex flex-row mt-8'>
                 <img src="https://avatars.githubusercontent.com/u/46141275" width="70px" 
-                className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}}/>
+                className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
                 <div className='flex flex-col pt-2 pl-4'>
                   <div className='text-xl font-bold'>Penulis</div>
                   Galih Wisnuaji

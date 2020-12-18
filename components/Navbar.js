@@ -29,13 +29,12 @@ function Navbar() {
             <i className="font-bold"><FontAwesomeIcon icon={faBars}/></i>
           </a>
         </div>
-        <div id="sideNav" className="flex flex-col justify-center inline-block w-full mt-16 text-center bg-primary sidenav">
-          <div className="sidenav-content">
-            <Link href="/" className="font-bold">Home</Link>
-            <Link href="/posts" className="font-bold">Articles</Link>
-            <Link href="/friends" className="font-bold">friends</Link>
-            <Link href="/about" className="font-bold">About</Link>
-
+        <div id="sideNav" className="fixed top-0 left-0 z-0 flex flex-col justify-center inline-block w-full mt-16 overflow-hidden text-center bg-primary nav">
+          <div className="relative flex flex-col w-full">
+            <Link href="/">Home</Link>
+            <Link href="/posts">Articles</Link>
+            <Link href="/friends">friends</Link>
+            <Link href="/about">About</Link>
             <div style={{marginTop:"20%"}} className="flex flex-row items-center justify-center inline-block align-middle">
               <a href={siteData.contact.github} target="blank" className="font-bold ">
                 <span className="p-0 text-xl">
