@@ -97,7 +97,7 @@ function Friends(){
               <>
                 
                 <Link href={ricing.img}>
-                <div className='overflow-hidden rounded-lg shadow-lg'>
+                <div className='overflow-hidden rounded-sm shadow-lg'>
                   <img src={ricing.img}/>
                 </div>
                   </Link>
