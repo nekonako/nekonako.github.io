@@ -27,7 +27,7 @@ function IndexPage(props){
       <SideNav />
       <div className="relative flex w-full min-h-screen md:w-2/3">
         <main className="flex-1">
-          <div className="px-2 py-1 mt-20 md:m-8">
+          <div className="min-h-screen px-2 py-1 mt-20 md:m-8">
             <div className='my-4 mt-10 text-2xl font-bold'>Articles</div>
             <div className="relative">
               <Masonry

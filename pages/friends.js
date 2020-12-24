@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SideNav from "../components/SideNav"
 import Head from 'next/head'
+import Masonry from 'react-masonry-css'
+import Link from 'next/link'
 
 const friends = [
   {
@@ -13,7 +15,7 @@ const friends = [
   {
     name : "Epsi",
     avatar : "https://avatars1.githubusercontent.com/u/52365",
-    url : "epsi-rns.github.io/"
+    url : "https://epsi-rns.github.io/"
   },
   {
     name : "Bandithijo",
@@ -32,6 +34,37 @@ const friends = [
   },
 ]
 
+const ricing = [
+  {
+    img : '/assets/ricing/nako-classic.png'
+  },
+  {
+    img: '/assets/ricing/fuel.png'
+  },
+  {
+    img: '/assets/ricing/furare-girl.png'
+  },
+  {
+    img: '/assets/ricing/palenight.png'
+  },
+  {
+    img: '/assets/ricing/furare-girl-1.png'
+  },
+  {
+    img: '/assets/ricing/palenight-i3.png'
+  },
+  {
+    img: '/assets/ricing/harutcha.png'
+  },
+]
+
+const breakpointColumnsObj = {
+  default: 2,
+  1100: 3,
+  700: 2,
+  500: 1
+};
+
 function Friends(){
   return (
     <>
@@ -44,7 +77,7 @@ function Friends(){
       <SideNav/>
       <div className="relative flex flex-col w-full md:w-2/3">
         <div className='flex-1 mt-20 text-center md:p-8 md:mt-0'>
-          <div className='my-8 text-xl font-bold'>Friendlist</div>
+          <div className='my-8 text-2xl font-bold'>Friends List</div>
           {friends.map((friend)=> {
             return (
               <>
@@ -57,6 +90,28 @@ function Friends(){
             )
           })}
         </div>
+        <span className='footer'></span>
+        <div className='m-4 md:m-20'>
+          <div className='py-4 text-2xl font-bold'>Ricing Journey</div>
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {ricing.map((ricing)=> {
+            return(
+              <>
+                
+                <Link href={ricing.img}>
+                <div className='overflow-hidden rounded-lg shadow-lg'>
+                  <img src={ricing.img}/>
+                </div>
+                  </Link>
+              </>
+            )
+          })}
+        </Masonry>
+          </div>
         <Footer />
       </div>
     </>
