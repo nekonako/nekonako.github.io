@@ -9,14 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt,faFileCode } from '@fortawesome/free-solid-svg-icons'
 import Masonry from 'react-masonry-css'
 
-const breakpointColumnsObj = {
+function IndexPage(props){
+  const breakpointColumnsObj = {
   default: 3,
   1100: 3,
   700: 2,
   500: 1
 };
-
-function IndexPage(props){
   return(
     <>
       <Head>
