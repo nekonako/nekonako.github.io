@@ -30,89 +30,91 @@ function IndexPage(props){
         <main className="flex-1">
           <div className="px-2 py-1 mt-20 md:m-8">
             <div className='my-4 mt-10 text-2xl font-bold'>Articles</div>
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column">
+            <div className="relative">
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
 
-              {/* get posts data */}
-              {props.posts.map((post)=>{
-                return (
-                  <div>
-                    <div  key={post.id} className='mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
-                      <div className='p-4'>
-                        <div>
-                          <div className='text-xl font-extrabold'>
-                            <Link href={`/post/${post.slug}`}>
-                              {post.title}
-                            </Link>
+                {/* get posts data */}
+                {props.posts.map((post)=>{
+                  return (
+                    <div>
+                      <div  key={post.id} className='mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
+                        <div className='p-4'>
+                          <div>
+                            <div className='text-xl font-extrabold'>
+                              <Link href={`/post/${post.slug}`}>
+                                {post.title}
+                              </Link>
+                            </div>
+                            <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
+                              <span className='text-xs text-secondary'>
+                                <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
+                                {tempe(post.date).format("d, DD MMMM YYYY")}
+                              </span>
+                            </div>
+                            <div className='pb-4 text-secondary'>
+                              {post.desc}
+                            </div>
+                            {post.tags.map(tag=>(
+                              <span key={tag.id} className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
+                            ))}
                           </div>
-                          <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
-                            <span className='text-xs text-secondary'>
-                              <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
-                              {tempe(post.date).format("d, DD MMMM YYYY")}
-                            </span>
-                          </div>
-                          <div className='pb-4 text-secondary'>
-                            {post.desc}
-                          </div>
-                          {post.tags.map(tag=>(
-                            <span key={tag.id} className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
-                          ))}
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              }).slice(-6)
-              }
-            </Masonry>
+                  );
+                }).slice(-6)
+                }
+              </Masonry>
+            </div>
 
-
-
+            {/* get project data */}
             <div className='my-4 mt-12 text-2xl font-bold'>Projects</div>
-            {/* projects data */}
+            <div className="relative">
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {/* projects data */}
+                {props.projects.map((project)=>{
+                  const cover = '/assets/project/' + project.slug + '/cover.png'
+                  return (
+                    <div>
+                      <div  key={project.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
+                        <img src={cover} />
+                        <div className='p-4'>
+                          <div>
+                            <div className='text-xl font-extrabold'>
+                              <Link href={`/project/${project.slug}`}>
+                                {project.title}
+                              </Link>
+                            </div>
+                            <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
+                              <span className='text-xs text-secondary'>
+                                <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
+                                {tempe(project.date).format("d, DD MMMM YYYY")}
+                              </span>
+                            </div>
+                            <div className='pb-4 text-secondary'>
+                              {project.desc}
+                            </div>
 
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column">
-
-              {props.projects.map((project)=>{
-                const cover = '/assets/project/' + project.slug + '/cover.png'
-                return (
-                  <div>
-                    <div  key={project.id} className='mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
-                      <img src={cover} />
-                      <div className='p-4'>
-                        <div>
-                          <div className='text-xl font-extrabold'>
-                            <Link href={`/project/${project.slug}`}>
-                              {project.title}
-                            </Link>
-                          </div>
-                          <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
-                            <span className='text-xs text-secondary'>
-                              <FontAwesomeIcon icon={faCalendarAlt} className='mr-2'/>
-                              {tempe(project.date).format("d, DD MMMM YYYY")}
-                            </span>
-                          </div>
-                          <div className='pb-4 text-secondary'>
-                            {project.desc}
+                            <a href={project.source}  className='px-2 pb-1 text-gray-200 rounded-sm bg-accent'>
+                              <FontAwesomeIcon icon={faFileCode} /> Source</a>
                           </div>
 
-                          <a href={project.source}  className='px-2 pb-1 text-gray-200 rounded-sm bg-accent'>
-                            <FontAwesomeIcon icon={faFileCode} /> Source</a>
                         </div>
-
                       </div>
                     </div>
-                  </div>
-                );
-              }).slice(-3)
-              }
-            </Masonry>
-
+                  );
+                }).slice(-3)
+                }
+              </Masonry>
+            </div>
           </div>
           <Footer />
         </main>

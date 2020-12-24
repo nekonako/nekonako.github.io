@@ -31,7 +31,7 @@ function Navbar() {
         </div>
         <div id="sideNav" className="fixed top-0 left-0 z-0 flex flex-col justify-center inline-block w-full mt-16 overflow-hidden text-center bg-primary nav">
           <div className="relative flex flex-col w-full">
-            <Link href="/">Home</Link>
+            <Link href="/">Home</Link>
             <Link href="/posts">Articles</Link>
             <Link href="/friends">friends</Link>
             <Link href="/about">About</Link>
