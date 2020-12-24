@@ -219,7 +219,7 @@ blockquote {
   padding-left: 20px; /* gutter size */
   background-clip: padding-box;
 }
- 
+
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 20px;
