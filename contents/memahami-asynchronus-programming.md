@@ -4,8 +4,7 @@ slug : 'memahami-asynchronus-programming'
 date : '2020-12-23'
 desc: 'Catatan mengenai konsep asynchronus programming pada javascript yang menggunakan single thread'
 tags:
-  - Promgramming
-  - javascript
+  - Javascript
 ---
 
 ## Pendahuluan
