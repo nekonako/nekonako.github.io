@@ -44,19 +44,13 @@ const ricing = [
   {
     img: '/assets/ricing/furare-girl.png'
   },
-  {
-    img: '/assets/ricing/palenight.png'
-  },
-  {
+   {
     img: '/assets/ricing/furare-girl-1.png'
   },
   {
     img: '/assets/ricing/palenight-i3.png'
   },
-  {
-    img: '/assets/ricing/harutcha.png'
-  },
-]
+ ]
 
 const breakpointColumnsObj = {
   default: 2,
