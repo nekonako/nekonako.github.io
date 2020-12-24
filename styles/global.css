@@ -197,11 +197,24 @@ blockquote {
   border-color: var(--color-text-gray);
 }
 
-.nav {
+.sidenav {
+  height: 0%; 
+  width: 100%; 
+  position: fixed; 
+  z-index: 0; 
+  top: 0; 
+  left: 0;
+   overflow: hidden; 
   transition: 0.5s;
 }
 
-.nav a {
+.sidenav-content {
+  width: 100%;
+  position: relative;
+}
+
+.sidenav a {
+  text-decoration: none;
   padding : 1rem;
   display: flex;
   flex-direction: column;
@@ -212,7 +225,7 @@ blockquote {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
-  margin-left: -30px; /* gutter size offset */
+  margin-left: -20px; /* gutter size offset */
   width: auto;
 }
 .my-masonry-grid_column {

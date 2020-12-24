@@ -29,8 +29,8 @@ function Navbar() {
             <i className="font-bold"><FontAwesomeIcon icon={faBars}/></i>
           </a>
         </div>
-        <div id="sideNav" className="z-0 flex flex-col justify-center inline-block w-full overflow-hidden text-center align-middle bg-primary nav">
-          <div className="flex flex-col justify-center w-full min-h-screen align-middle">
+        <div id="sideNav" className="flex flex-col justify-center inline-block w-full mt-16 text-center bg-primary sidenav">
+          <div className="sidenav-content">
             <Link href="/">Home</Link>
             <Link href="/posts">Articles</Link>
             <Link href="/friends">friends</Link>
