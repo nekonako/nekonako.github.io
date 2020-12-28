@@ -5,7 +5,30 @@ import SideNav from "../components/SideNav"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import Head from 'next/head'
+import Masonry from 'react-masonry-css'
+import Link from 'next/link'
 
+const ricing = [
+  {
+    img : '/assets/ricing/nako-classic.png'
+  },
+   {
+    img: '/assets/ricing/furare-girl.png'
+  },
+  {
+    img: '/assets/ricing/fuel.png'
+  },
+   {
+    img: '/assets/ricing/palenight-i3.png'
+  },
+]
+
+const breakpointColumnsObj = {
+  default: 3,
+  1100: 3,
+  700: 2,
+  500: 1
+};
 
 function About() {
   return (
@@ -23,13 +46,35 @@ function About() {
             <div className="text-2xl font-bold"> <span className="text-accent"># </span>
               Hallo Semuanya</div> Nama saya Galih Wisnuaji.
             <br/>
-            Cuma orang biasa yang suka menghabiskan waktu dengan penguin dan honocorokoscript.
+            Cuma seorang penikmat kopi dan drama.
             <div className="pt-8 text-2xl font-bold">
               <span className="text-accent"># </span>
               Kontak</div>
-            Galih wisnuaji
-            <br/>
             <a href="mailto:code.yuune@gmail.com" rel="external noopener">ne.nekonako@gmail.com</a>
+
+            <div className='mt-8 footer'></div>
+
+            <div className='py-4 text-2xl font-bold'>Ricing Journey</div>
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {ricing.map((ricing)=> {
+                return(
+                  <>
+
+                    <Link href={ricing.img}>
+                      <div className='overflow-hidden shadow-lg rounded-md'>
+                        <img src={ricing.img}/>
+                      </div>
+                    </Link>
+                  </>
+                )
+              })}
+            </Masonry>
+
+
           </div>
           <Footer />
         </main>

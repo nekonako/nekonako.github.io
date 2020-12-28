@@ -12,7 +12,7 @@ function SideNav(){
     <>
       <div className="z-10 invisible hidden w-1/3 bg-secondary md:visible md:inline-block" style={{borderRight:'1px solid var(--color-text-gray)',borderColor:'text-gray'}}>
         <div className="sticky top-0 left-0 flex flex-col justify-center min-h-screen">
-          <div className="absolute top-0 left-0 inline-block m-4 text-lg text-center shadow-lg bg-secondary rounded-md">
+          <div className="absolute top-0 left-0 inline-block px-2 m-4 text-lg">
             <ThemeToggle />
           </div>
           <div className='w-full p-0 m-0'>

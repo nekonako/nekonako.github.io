@@ -13,14 +13,14 @@
   --color-text-gray: #52576A;
 }
 .light {
-  --color-bg-primary :#ffffff;
-  --color-bg-secondary :#ffffff ;
-  --color-bg-accent : #82B1FF;
+  --color-bg-primary :#F3D2C1;
+  --color-bg-secondary :#FEF6E4;
+  --color-bg-accent : #F582AE;
 
-  --color-text-primary: #686c85;
-  --color-text-secondary: #6e7180;
-  --color-text-accent: #82B1FF;
-  --color-text-gray: #E2E0E0;
+  --color-text-primary: #001858;
+  --color-text-secondary: #172C66;
+  --color-text-accent: #F582AE;
+  --color-text-gray: #F3D2C1;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
@@ -156,7 +156,7 @@ blockquote {
   margin-bottom: auto;
   line-height: 0;
 
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .react-toggle--checked .react-toggle-track-check {

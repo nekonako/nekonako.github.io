@@ -29,8 +29,9 @@ sebuah shorcut yang kemudian di vim dikenal dengan istilah remap.
   akan tetapi sangat terbatas. Sedangkan pada vim, vim sendirilah yang menyesuaikan diri dengan workflow pengguna, karena pengguna sangat 
   dibebaskan untuk memodifikasi workflow tersebut.
 
-- **Terlihat Pro**:
-  Layaknya RGB pada PC yang dapat meningkatkan FPS pada suatu game, menggunakan vim juga dapat meningkatkan ke "pro-an" kita dimata orang lain.
+- **Terlihat Superior**:
+  Layaknya RGB pada PC yang dapat meningkatkan FPS pada suatu game, menggunakan vim juga juga dapat membuat kita terihat pro walaupun
+  mungkin faktanya tidak.
   
 ## Apa itu neovim
 Vim adalah text editor yang dikembangkan oleh komunitas open source. Dengan umurnya yang lebih dari 20 tahun, source code vim sudah
@@ -154,5 +155,4 @@ set mouse=a
 
 Itu adalah sebagian options dari vim yang saya ingat dan tahu fungsinya, sebetulnya masih banyak sekali option yang disediakan akan 
 tetapi saya tidak mungkin membahasnya satu persatu.
-
-##  
+ 

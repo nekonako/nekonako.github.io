@@ -37,7 +37,7 @@ function PostPage(props){
             <div className='text-sm text-center'>{tempe(props.post.date).format("dd, DD MMMM YYYY")}</div>
             <div className='mt-12 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
               <div className='pt-12'>{props.post.tags.map(tag=>(
-                <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
+                <span className='px-1 pb-1 mr-1 text-base text-gray-800 rounded-sm bg-accent'>{tag}</span>
                 
               ))}</div>
               <div className='flex flex-row mt-8'>

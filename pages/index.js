@@ -40,7 +40,7 @@ function IndexPage(props){
                 {props.posts.map((post)=>{
                   return (
                     <div>
-                      <div  key={post.id} className='mt-auto overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
+                      <div  key={post.id} className='mt-auto overflow-hidden rounded-lg bg-secondary hover:shadow-xl'>
                         <div className='p-4'>
                           <div>
                             <div className='text-xl font-extrabold'>
@@ -58,7 +58,7 @@ function IndexPage(props){
                               {post.desc}
                             </div>
                             {post.tags.map(tag=>(
-                              <span key={tag.id} className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-20'># {tag}</span>
+                              <span key={tag.id} className='px-2 pb-1 mr-1 text-base text-gray-800 rounded-sm bg-accent'>{tag}</span>
                             ))}
                           </div>
                         </div>
@@ -84,7 +84,7 @@ function IndexPage(props){
                   return (
                     <div>
                       <div  key={project.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
-                        <img src={cover} />
+                        <img src={cover} width='100%' />
                         <div className='p-4'>
                           <div>
                             <div className='text-xl font-extrabold'>
@@ -102,7 +102,7 @@ function IndexPage(props){
                               {project.desc}
                             </div>
 
-                            <a href={project.source}  className='px-2 pb-1 text-gray-200 rounded-sm bg-accent'>
+                            <a href={project.source}  className='px-2 pb-1 text-gray-800 rounded-sm bg-accent'>
                               <FontAwesomeIcon icon={faFileCode} /> Source</a>
                           </div>
 
