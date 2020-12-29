@@ -11,8 +11,8 @@ import Masonry from 'react-masonry-css'
 
 function IndexPage(props){
   const breakpointColumnsObj = {
-  default: 3,
-  1100: 3,
+  default: 1,
+  1400: 3,
   700: 2,
   500: 1
 };
@@ -20,6 +20,8 @@ function IndexPage(props){
     <>
       <Head>
         <title>Home | {siteData.name}</title>
+        <meta property='og:title' content='nekonako' />
+        <meta property='og:description' content='Nako personal website' />
         <meta data-hid="og:image" property="og:image" content="/assets/nako.jpg"/>
         <meta property='og:image' content="/assets/nako.jpg" />
       </Head>

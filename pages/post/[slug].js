@@ -17,14 +17,16 @@ function PostPage(props){
     identifier: props.post.id,
     title: props.post.title
   }
-  
+
 
   return (
     <>
       <Head>
         <title>Artikel | {props.post.title}</title>
+        <meta property='og:title' content={props.post.title} />
+        <meta property='og:description' content={props.post.desc} />
         <meta data-hid="og:image" property="og:image" content={cover} />
-         <meta property='og:image' content={cover} />
+        <meta property='og:image' content={cover} />
       </Head>
       <SideNav />
       <Navbar />
@@ -38,17 +40,17 @@ function PostPage(props){
             <div className='mt-12 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
               <div className='pt-12'>{props.post.tags.map(tag=>(
                 <span className='px-1 pb-1 mr-1 text-base text-gray-800 rounded-sm bg-accent'>{tag}</span>
-                
+
               ))}</div>
               <div className='flex flex-row mt-8'>
-                <img src="https://avatars.githubusercontent.com/u/46141275" width="70px" 
-                className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
+                <img src="https://avatars.githubusercontent.com/u/46141275" width="70px"
+                  className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
                 <div className='flex flex-col pt-2 pl-4'>
                   <div className='text-xl font-bold'>Penulis</div>
                   Galih Wisnuaji
-                  </div>
                 </div>
-                </div>
+              </div>
+            </div>
             <div className='pt-8'>
               <DiscussionEmbed
                 shortname={disqusShortname}

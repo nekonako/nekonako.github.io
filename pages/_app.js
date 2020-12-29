@@ -36,9 +36,7 @@ function MyApp({ Component, pageProps }) {
         <meta name='twitter:description' content='Most handsome people in the world' />
         <meta name='twitter:image' content='/assets/icon.png' />
         <meta name='twitter:creator' content='@Galih_wisnuA' />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content='nekonako' />
-        <meta property='og:description' content='Nako personal website' />
+        <meta property='og:type' content='website' /> 
         <meta property='og:site_name' content='nekonako' />
         <meta property='og:url' content='https://nekonako.me' />
              </Head>

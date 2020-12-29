@@ -22,6 +22,8 @@ function ProjectPage(props){
     <>
       <Head>
         <title>Project | {props.project.title}</title>
+        <meta property='og:title' content={props.project.title} />
+        <meta property='og:description' content={props.project.desc} />
         <meta data-hid="og:image" property="og:image" content={cover} />
          <meta property='og:image' content={cover} />
       </Head>

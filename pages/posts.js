@@ -9,8 +9,8 @@ import Masonry from 'react-masonry-css'
 
 function PostsPage(props){
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 3,
+    default: 1,
+    1400: 3,
     700: 2,
     500: 1
   };
@@ -37,7 +37,6 @@ function PostsPage(props){
                   return (
                     <div>
                       <div  key={post.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
-                        <img src={cover} />
                         <div className='p-4'>
                           <div>
                             <div className='text-xl font-extrabold'>
@@ -64,36 +63,36 @@ function PostsPage(props){
                   );
                 })
                 }
-                </Masonry>
-              </div>
+              </Masonry>
             </div>
-                <Footer />
-          </main>
-        </div>
-      </>
-              )
-              }
+          </div>
+          <Footer />
+        </main>
+      </div>
+    </>
+  )
+}
 
-              export async function getStaticProps() {
-                const fs  = require('fs');
-                const matter = require('gray-matter');
-                const { v4: uuid } = require('uuid');
+export async function getStaticProps() {
+  const fs  = require('fs');
+  const matter = require('gray-matter');
+  const { v4: uuid } = require('uuid');
 
-                const files = fs.readdirSync(`${process.cwd()}/contents/`, "utf-8");
-                const posts = files
-                  .filter((fn) => fn.endsWith(".md"))
-                  .map((fn) => {
-                    const path = `${process.cwd()}/contents/${fn}`;
-                    const rawContent =fs.readFileSync(path, {
-                      encoding: "utf-8",
-                    });
-                    const { data } = matter(rawContent);
-                    return {...data, id:uuid()};
-                  });
+  const files = fs.readdirSync(`${process.cwd()}/contents/`, "utf-8");
+  const posts = files
+    .filter((fn) => fn.endsWith(".md"))
+    .map((fn) => {
+      const path = `${process.cwd()}/contents/${fn}`;
+      const rawContent =fs.readFileSync(path, {
+        encoding: "utf-8",
+      });
+      const { data } = matter(rawContent);
+      return {...data, id:uuid()};
+    });
 
-                return {
-                  props : { posts},
-                };
-              }
+  return {
+    props : { posts},
+  };
+}
 
-              export default PostsPage
+export default PostsPage
