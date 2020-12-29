@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }) {
         <link rel='shortcut icon' href='/static/icons/safari-pinned-tab.svg' />
         <meta name='twitter:card' content='Hey! there' />
         <meta name='twitter:url' content='https://nekonako.me' />
-        <meta name='twitter:title' content='Self thought web develooping' />
-        <meta name='twitter:description' content='Most handsome people in the world' />
-        <meta name='twitter:image' content='/assets/icon.png' />
+        <meta name='twitter:title' content='Galih wisnuaji' />
+        <meta name='twitter:description' content='Penikmat kopi dan drama' />
+        <meta name='twitter:image' content='/assets/icon192.png' />
         <meta name='twitter:creator' content='@Galih_wisnuA' />
         <meta property='og:type' content='website' /> 
         <meta property='og:site_name' content='nekonako' />
