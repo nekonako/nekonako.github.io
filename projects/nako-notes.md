@@ -2,7 +2,7 @@
 title : 'Nako Notes'
 slug : 'nako-notes'
 date : '2020-11-25'
-desc: 'SImple notes taking with react hooks and local storage'
+desc: 'Simple notes taking with react hooks and local storage'
 tags:
   - linux
   - vim

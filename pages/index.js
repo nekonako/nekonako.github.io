@@ -41,7 +41,7 @@ function IndexPage(props){
                 {/* get posts data */}
                 {props.posts.map((post)=>{
                   return (
-                    <div>
+                    <>
                       <div  key={post.id} className='mt-auto overflow-hidden rounded-lg bg-secondary hover:shadow-xl'>
                         <div className='p-4'>
                           <div>
@@ -65,7 +65,7 @@ function IndexPage(props){
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </>
                   );
                 }).slice(-6)
                 }
@@ -84,7 +84,7 @@ function IndexPage(props){
                 {props.projects.map((project)=>{
                   const cover = '/assets/project/' + project.slug + '/cover.png'
                   return (
-                    <div>
+                    <>
                       <div  key={project.id} className='overflow-hidden rounded-lg shadow-md bg-secondary hover:shadow-xl'>
                         <img src={cover} width='100%' />
                         <div className='p-4'>
@@ -110,7 +110,7 @@ function IndexPage(props){
 
                         </div>
                       </div>
-                    </div>
+                    </>
                   );
                 }).slice(-3)
                 }

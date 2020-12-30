@@ -71,10 +71,10 @@ pre {
   border-top: 5px solid;
   border-color:  var(--color-text-accent);
   margin-top: 1rem !important;
-  margin-top: 1rem !important;
+  margin-top: 1rem !important; 
 }
 code {
-  color:  var(--color-text-accent);
+  color:  var(--color-text-accent); 
 }
 
 pre code {
@@ -236,4 +236,11 @@ blockquote {
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  pre {
+  margin-left: -1.5rem !important;
+  margin-right: -1.5rem !important;
+  }
 }
