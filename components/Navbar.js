@@ -29,7 +29,7 @@ function Navbar() {
             <i className="font-bold"><FontAwesomeIcon icon={faBars}/></i>
           </a>
         </div>
-        <div id="sideNav" className="flex flex-col justify-center inline-block w-full mt-16 text-center bg-primary sidenav">
+        <div id="sideNav" className="flex flex-col justify-center inline-block w-full text-center mt-14 bg-primary sidenav">
           <div className="sidenav-content">
             <Link href="/">Home</Link>
             <Link href="/posts">Articles</Link>
