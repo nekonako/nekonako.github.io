@@ -165,18 +165,3 @@ dunst
 
 Sejauh ini Arch linux adalah distro GNU/linux yang paling lama saya singgahi karena adanya AUR yang sangat memudahkan saya 
 dalam berbagai masalah.Dan rasanya saya belum ingin melirik distro lain.
-
-## Sedikit Curhat
-
-Pengalaman menggunkan linux memang banyak drama yang menyertainya dan cukup membuat berdarah-darah diawal.
-
-Saya jadi teringat saat saya kelas 11 SMK, saat itu saya baru mempunyai laptop dan satu minggu kemudian saya memutuskan untuk 
-menginstall ubuntu.Dan hasilnya sudah bisa ditebak, dengan kegoblokan saya, niat hati ingin dual-boot tapi yang terjadi 
-malah partisi OS windows saya hilang.
-
-Karena paketan malam saya sudah habis untuk mendownload file ISO ubuntu saya jadi tidak bisa mendownload ISO windows lagi, akhirnya 
-saya memutuskan untuk membiasakan diri dengan ubuntu.
-
-Mulai dari situ banyak drama yang terjadi, seperti wifi yang tidak ada, kecerahan tidak bisa diatur,grub hilang dan lain-lain.
-Tapi menurut saya disitulah hal menariknya.
-

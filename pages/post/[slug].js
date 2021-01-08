@@ -31,7 +31,7 @@ function PostPage(props){
       <SideNav />
       <Navbar />
       <div className="relative flex flex-col w-full md:w-2/3">
-        <img src={cover} className='w-full mt-16 md:mt-0' alt={props.post.title}/>
+        <img src={cover} className='w-full mt-14 md:mt-0' alt={props.post.title}/>
         <main className="flex-1 p-6 md:p-8">
           <div className="md:p-4">
             <div className='text-3xl font-bold text-center md:text-4xl'>{props.post.title}</div>
@@ -39,15 +39,16 @@ function PostPage(props){
             <div className='text-sm text-center'>{tempe(props.post.date).format("dd, DD MMMM YYYY")}</div>
             <div className='mt-12 content'><span dangerouslySetInnerHTML={{ __html: props.post.content }} />
               <div className='pt-12'>{props.post.tags.map(tag=>(
-                <span className='px-1 pb-1 mr-1 text-base text-gray-800 rounded-sm bg-accent'>{tag}</span>
+                <span className='px-2 py-1 mr-1 text-base text-gray-800 rounded-sm bg-accent'>{tag}</span>
 
               ))}</div>
-              <div className='flex flex-row mt-8'>
-                <img src="https://avatars.githubusercontent.com/u/46141275" width="70px"
+              <div className='mt-8 mb-4 text-xl font-bold'>Penulis</div>
+              <div className='flex flex-row'>
+                  <img src="https://avatars.githubusercontent.com/u/46141275" width="70px"
                   className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
                 <div className='flex flex-col pt-2 pl-4'>
-                  <div className='text-xl font-bold'>Penulis</div>
-                  Galih Wisnuaji
+                  <div className='text-lg font-bold'>Galih Wisnuaji</div>
+                  Penikmat kopi dan drama
                 </div>
               </div>
             </div>

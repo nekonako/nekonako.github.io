@@ -54,7 +54,7 @@ function PostsPage(props){
                               {post.desc}
                             </div>
                             {post.tags.map(tag=>(
-                              <span className='px-1 pb-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-10'># {tag}</span>
+                              <span className='px-1 mr-1 text-base bg-gray-500 rounded-sm text-primary bg-opacity-10'># {tag}</span>
                             ))}
                           </div>
                         </div>
