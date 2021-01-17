@@ -47,7 +47,7 @@ function PostPage(props){
               <div className='mt-8 mb-4 text-xl font-bold'>Penulis</div>
               <div className='flex flex-row'>
                   <img src="https://avatars.githubusercontent.com/u/46141275" width="70px"
-                  className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
+                  className="relative rounded-full text-accent border-current" style={{borderWidth:"3px"}} alt="nekonako"/>
                 <div className='flex flex-col pt-2 pl-4'>
                   <div className='text-lg font-bold'>Galih Wisnuaji</div>
                   Penikmat kopi dan drama
