@@ -2,7 +2,7 @@
 title : 'Setup xfwm standalone feat sxhkd dan zentile'
 slug : 'setup-xfwm-standalone'
 date : '2021-1-8'
-desc: 'Setup xfwm standalone + sxhkd yang saya gunakan pada arch linx'
+desc: 'Setup xfwm standalone featsxhkd dan zentile yang saya gunakan pada arch linx'
 tags:
   - linux
   - xfwm
