@@ -183,7 +183,10 @@ Karena saya pecinta tiling window, atas saran mas [harry](https://github.com/owl
 
 Untuk menggunakanya kita cukup medownload pre compile binarynya atau mengcompile sendiri.
 
+<br/>
+
 #### Membuat App launcher zentile
+
 Saat saya menggunakan zentile dan dimasukan ke autostart, doi tidak mau berjalan oleh karena itu saya memutuskan untuk membuat launchernya
 kemudian saya jalankan lewat dmenu/rofi.
 
