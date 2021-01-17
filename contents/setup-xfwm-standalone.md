@@ -30,6 +30,7 @@ Tentu package yang saya install diatas bersifat opsional, yang terpenting adalah
 
 ## Konfigurasi
 Xfwm sendiri merupakan window manager yang digunakan pada xfce dan xfce sendiri merupakan desktop environment yang bersifat modular.
+
 Oleh karena itu kita bisa menginstall komponenya tanpa harus menginstall desktop environmentnya itu sendiri.
 
 Karena kita hanya menginstall window managernya saja, ada beberapa hal yang harus dilakukan secara manual.
@@ -44,8 +45,9 @@ Dari flow diatas kita dapat mengetahui apa saja yang harus kiya lakukan.
 
 
 ## Membuat session
-Display manager seperti lightdm, slim, gdm dan lain-lain biasanya membaca session di directory `/usr/share/xsessions`, oleh karena itu akan membuat session untuk xfwm dan disimpan disana. Caranya mudah cuku buat file dengan extensi `.desktop`, lalu
-taruh di durectory `/usr/share/xsessions`.
+Display manager seperti lightdm, slim, gdm dan lain-lain biasanya membaca session di directory `/usr/share/xsessions`, oleh karena itu akan membuat session untuk xfwm dan disimpan disana. 
+
+Caranya mudah cuku buat file dengan extensi `.desktop`, lalu taruh di durectory `/usr/share/xsessions`.
 
 <br/>
 
@@ -62,6 +64,7 @@ Type=Application
 
 perhatikan bagian `Exec=/usr/bin/xfwm4-session.sh`, sebenarnya kita bisa saja langsung mengeksekusi xfwn, tapi sebelum itu
 kita ingin menjalankan aplikasi-apliaksi yang kita butuhkan terlebih dahulu sebelum sebelum menjalankan xfwm.
+
 Oleh karena itu kita membuat bash script simple yang digunakan untuk mengeksekusi aplikasi autostart dan xfwm.
 
 <br/>
