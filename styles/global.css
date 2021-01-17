@@ -73,7 +73,8 @@ pre {
   margin-top: 1rem !important; 
 }
 code {
-  color:  var(--color-text-accent); 
+  color:  var(--color-text-accent);
+  font-size: 0.9rem !important;
 }
 
 pre code {
