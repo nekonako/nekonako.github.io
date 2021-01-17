@@ -205,5 +205,5 @@ Categories=ConsoleOnly;System;
 
 <br/>
 
-## XFWM + zendtile
+### xfwm + zentile
 !['xfwm tiling'](../assets/post/setup-xfwm-standalone/xfwm-tiling.png)
