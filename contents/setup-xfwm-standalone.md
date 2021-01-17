@@ -47,7 +47,9 @@ Dari flow diatas kita dapat mengetahui apa saja yang harus kiya lakukan.
 Display manager seperti lightdm, slim, gdm dan lain-lain biasanya membaca session di directory `/usr/share/xsessions`, oleh karena itu akan membuat session untuk xfwm dan disimpan disana. Caranya mudah cuku buat file dengan extensi `.desktop`, lalu
 taruh di durectory `/usr/share/xsessions`.
 
-**xfwm.desktop**
+<br/>
+
+**# xfwm.desktop**
 
 ```bash
 [Desktop Entry]
@@ -62,7 +64,9 @@ perhatikan bagian `Exec=/usr/bin/xfwm4-session.sh`, sebenarnya kita bisa saja la
 kita ingin menjalankan aplikasi-apliaksi yang kita butuhkan terlebih dahulu sebelum sebelum menjalankan xfwm.
 Oleh karena itu kita membuat bash script simple yang digunakan untuk mengeksekusi aplikasi autostart dan xfwm.
 
-**xfwm4-session.sh**
+<br/>
+
+**# xfwm4-session.sh**
 
 ```bash
 #!/bin/bash
@@ -79,9 +83,10 @@ xfwm4
 mkdir ~/.config/xfwm4 && touch ~/.config/xfwm4/autostart
 chmod +x ~/.config/xfwm4/autostart
 ```
+
 <br/>
 
-**autostart**
+**# autostart**
 
 ```bash
 nitrogen --restore &
@@ -95,7 +100,7 @@ xsettingsd &
 ```
 
 ## Membuat shortcut untuk aplikasi
-**~/.config/sxhkd/sxhkdrc**
+**# ~/.config/sxhkd/sxhkdrc**
 
 ```bash
 ## Restart sxhkd
@@ -194,5 +199,5 @@ Categories=ConsoleOnly;System;
 
 <br/>
 
-#### # XFWM + zendtile
+## XFWM + zendtile
 !['xfwm tiling'](../assets/post/setup-xfwm-standalone/xfwm-tiling.png)

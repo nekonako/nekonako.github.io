@@ -55,6 +55,8 @@ function PostPage(props){
               </div>
             </div>
             <div className='pt-8'>
+               <br/>
+               <br/>
               <DiscussionEmbed
                 shortname={disqusShortname}
                 config={disqusConfig}

@@ -26,6 +26,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=roboto+condensed:wght@400;700&display=swap');
 
+.font-sans {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+
 .content ul {
   list-style: disc;
   margin-left: 2rem;

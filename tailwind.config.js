@@ -5,9 +5,6 @@ module.exports = {
    ],
    darkMode: false, // or 'media' or 'class'
    theme: {
-      fontFamily : {
-         'sans' : ['Roboto Condensed', 'sans-serif'],
-      },
       extend: {
          backgroundColor: {
             primary: "var(--color-bg-primary)",
