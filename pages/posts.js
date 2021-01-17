@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import Head from 'next/head'
 import Masonry from 'react-masonry-css'
+import Navbar from '../components/Navbar'
 
 function PostsPage(props){
   const breakpointColumnsObj = {
