@@ -23,6 +23,8 @@ function PostPage(props){
     <>
       <Head>
         <title>Artikel | {props.post.title}</title>
+         <meta name='apple-mobile-web-app-title' content={props.post.title} />
+        <meta name='description' content={props.post.desc} />
         <meta property='og:title' content={props.post.title} />
         <meta property='og:description' content={props.post.desc} />
         <meta data-hid="og:image" property="og:image" content={cover} />

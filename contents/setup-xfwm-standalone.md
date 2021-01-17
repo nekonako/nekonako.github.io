@@ -1,5 +1,5 @@
 ---
-title : 'Setup xfwm standalone + sxhkd'
+title : 'Setup xfwm standalone feat sxhkd dan zentile'
 slug : 'setup-xfwm-standalone'
 date : '2021-1-8'
 desc: 'Setup xfwm standalone + sxhkd yang saya gunakan pada arch linx'
@@ -8,12 +8,16 @@ tags:
   - xfwm
 ---
 
-## Pendahuluan
-Linux merupakan sistem operasi yang sangat fleksibel, salah satu hal yang membuatnya fleksibel adalah kita bisa membuat workflow sesuai dengan yang kita inginkan.
-Saya sendiri sudah satu tahun terakhir menggunkan i3 sebagai windows manager. Dan sejauh ini i3 memberikan pengalaman yang
-sangat memuaskan. Tapi ada kalanya kita bosan dan ingin mencoba hal baru, akan tetapi saya mengalami kebingungan dalam memilih window manager.
-Di tengah kebingungan tersebut saya teringat postingan dari salah satu legend dari dunia persilatan taitu mas 
-[adhi](https://gihut.com/addy-dclxvi) yang menggunkan xfwm standalone. Sayapun tertarik dan ingin mencobanya.
+## Latar belakang
+Linux merupakan sistem operasi yang sangat fleksibel, salah satu hal yang membuatnya fleksibel adalah kita bisa memilih desktop environment
+kita sukai dan mengatur workflownya sesuai dengan kebiasaan kita.
+
+Saya sendiri sudah satu tahun terakhir menggunkan i3 sebagai windows manager, dan i3 sangat nyaman digunkan.
+
+Tapi ada kalanya kita bosan dan ingin mencoba hal baru, dan tiba-tiba saya teringat dengan setup dari salah satu 
+legend di dunia persilatan yaitu mas [adhi](https://gihut.com/addy-dclxvi) yang menggunkan xfwm standalone.
+
+Saya pun langsung mengintip config beliau dan mencobanya.
 
 ## Persiapan
 Kita persiapkan terebih dahulu bahan-bahanya
@@ -25,16 +29,23 @@ sudo pacman -S xfwm4 nitrogen tint2 dunst conky redshift sxhkd xsettingsd polkit
 Tentu package yang saya install diatas bersifat opsional, yang terpenting adalah menginstall **xfwm4**.
 
 ## Konfigurasi
-Xfwm sendiri merupakan window manager yang digunakan pada xfce. Xfce sendiri merupakan desktop environment yang bersifat modular.
+Xfwm sendiri merupakan window manager yang digunakan pada xfce dan xfce sendiri merupakan desktop environment yang bersifat modular.
 Oleh karena itu kita bisa menginstall komponenya tanpa harus menginstall desktop environmentnya itu sendiri.
 
 Karena kita hanya menginstall window managernya saja, ada beberapa hal yang harus dilakukan secara manual.
+berikut adalah flow dari login sampai menjalankan xfwm
 
---- FLow
-=> Display Manager => mejalankan session => menlajankan apliaksi ( autostart ) => menjalankan xfwm
+<br/>
+
+**FLOW**
+> Display Manager => mejalankan session => menlajankan apliaksi ( autostart ) => menjalankan xfwm
+
+Dari flow diatas kita dapat mengetahui apa saja yang harus kiya lakukan.
+
 
 ## Membuat session
-
+Display manager seperti lightdm, slim, gdm dan lain-lain biasanya membaca session di directory `/usr/share/xsessions`, oleh karena itu akan membuat session untuk xfwm dan disimpan disana. Caranya mudah cuku buat file dengan extensi `.desktop`, lalu
+taruh di durectory `/usr/share/xsessions`.
 
 **xfwm.desktop**
 
@@ -42,31 +53,28 @@ Karena kita hanya menginstall window managernya saja, ada beberapa hal yang haru
 [Desktop Entry]
 Name=Xfwm
 Comment=Log in using the Xfwm window manager without session manager.
-Exec=/usr/bin/xfwm4-session
+Exec=/usr/bin/xfwm4-session.sh
 Icon=xfwm4
 Type=Application
 ```
 
-file xfwm4.desktop ditaruh di directory /usr/share/xsessions/.
-file xfwm4.desktop ini nantinya akan dideteksi oleh display manager dan mengeksekusi file xfwm4-session.
+perhatikan bagian `Exec=/usr/bin/xfwm4-session.sh`, sebenarnya kita bisa saja langsung mengeksekusi xfwn, tapi sebelum itu
+kita ingin menjalankan aplikasi-apliaksi yang kita butuhkan terlebih dahulu sebelum sebelum menjalankan xfwm.
+Oleh karena itu kita membuat bash script simple yang digunakan untuk mengeksekusi aplikasi autostart dan xfwm.
 
-<br/>
-
-**xfwm4-session**
+**xfwm4-session.sh**
 
 ```bash
-#!bin/bash
+#!/bin/bash
 
 /home/$USER/.config/xfwm4/autostart
 xfwm4
 ```
 
-karena pada file xfwm.desktop mengarah ke /usr/bin maka maka kita taruh disana.
-file xfwm4-session berfungsi untuk menjalankan aplikasi-aplikasi yang kita butuhkan sebelum menjalankan xfwmnya itu sendiri
-
 > jangan lupa beri hak akses executeable
 
 ## Membuat autostart
+
 ```bash
 mkdir ~/.config/xfwm4 && touch ~/.config/xfwm4/autostart
 chmod +x ~/.config/xfwm4/autostart
@@ -157,6 +165,34 @@ XF86AudioNext
     mpc next
 
 ## Exit xfwm
-super + xfwm4
+super + shift escape
     pkill xfwm4
 ```
+
+## Mode tiling dengan zentile
+Karena saya pecinta tiling window, atas saran mas [harry](https://github.com/owl4ce/) saya memutuskan untuk menggunakan 
+[zentile](https://github.com/blrsn/zentile).
+
+Untuk menggunakanya kita cukup medownload pre compile binarynya atau mengcompile sendiri.
+
+#### Membuat App launcher zentile
+Saat saya menggunakan zentile dan dimasukan ke autostart, doi tidak mau berjalan oleh karena itu saya memutuskan untuk membuat launchernya
+kemudian saya jalankan lewat dmenu/rofi.
+
+```bash
+# FILE => $HOME/.local/share/applications/zentile.desktop
+[Desktop Entry]
+Type=Application
+Name=Zentile
+Comment=Automatic Tiling for EWMH Complaint Window Managers
+Exec=zentile
+Categories=ConsoleOnly;System;
+```
+
+## Kesimpilan
+!['nekonako xfwm'](../assets/post/setup-xfwm-standalone/xfwm.png)
+
+<br/>
+
+#### # XFWM + zendtile
+!['xfwm tiling'](../assets/post/setup-xfwm-standalone/xfwm-tiling.png)

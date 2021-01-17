@@ -21,6 +21,7 @@ function PostsPage(props){
         <meta data-hid="og:image" property="og:image" content="/assets/nako.jpg"/>
         <meta property='og:image' content="/assets/nako.jpg" />
       </Head>
+        <Navbar />
       <SideNav />
       <div className="relative flex w-full md:w-2/3">
         <main className="flex-1">
