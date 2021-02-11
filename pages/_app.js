@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+         <script data-ad-client="ca-pub-7003687861515202" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <meta name='application-name' content='nekonako' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-status-bar-style' content='default' />
