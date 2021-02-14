@@ -23,7 +23,7 @@ function PostPage(props){
         <>
             <Head>
                 <script data-ad-client="ca-pub-7003687861515202"
-                    async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
                 </script>
                 <title>Artikel | {props.post.title}</title>
                 <meta name='apple-mobile-web-app-title' content={props.post.title} />
