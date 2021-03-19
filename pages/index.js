@@ -34,9 +34,13 @@ function IndexPage({ allArtikel }){
                                  slug={post.slug}
                                  date={post.date}
                                  tags={post.tags.map((tag) => {
-                                    return  <span className='px-2 mr-1 text-base
-                                       text-gray-800 rounded-sm bg-accent'>{tag}
-                                    </span>
+                                    return (
+                                       <>
+                                          <span className='px-2 mr-1 text-base
+                                             text-gray-800 rounded-sm bg-accent'>{tag}
+                                          </span>
+                                       </>
+                                    )
                                  })}
                                  />
                               </>
