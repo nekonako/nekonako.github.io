@@ -2,8 +2,6 @@ import React  from "react"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import SideNav from "../components/SideNav"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import Head from 'next/head'
 import Masonry from 'react-masonry-css'
 import Link from 'next/link'
