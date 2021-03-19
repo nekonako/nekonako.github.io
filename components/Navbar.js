@@ -1,13 +1,12 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(fab)
-
 import Link from 'next/link'
 import siteData from '../site-data'
+
+import dynamic from 'next/dynamic'
+const LineIcon = dynamic(
+   () => import('react-lineicons'),
+   {ssr : false}
+)
 
 function openNav() {
   document.getElementById("sideNav").style.height = "100%";
@@ -26,7 +25,7 @@ function Navbar() {
           </a>
           <span className="text-2xl font-bold"><Link href="/" >Nekonako</Link></span>
           <a onClick={openNav} className="md:hidden" data-target="navMenu">
-            <i className="font-bold"><FontAwesomeIcon icon={faBars}/></i>
+            <i className="font-bold"><LineIcon name='menu'/></i>
           </a>
         </div>
         <div id="sideNav" className="flex flex-col justify-center inline-block w-full text-center mt-14 bg-primary sidenav">
@@ -38,28 +37,28 @@ function Navbar() {
             <div style={{marginTop:"20%"}} className="flex flex-row items-center justify-center inline-block align-middle">
               <a href={siteData.contact.github} target="blank" className="font-bold ">
                 <span className="p-0 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'github']} /></i>
+                  <i><LineIcon name='github'/></i>
                 </span>
               </a>
               <a href={siteData.contact.twitter} target="blank" className="font-bold">
                 <span  className="p-0 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'twitter']} /></i>
+                  <i><LineIcon name='twitter'/></i>
                 </span>
               </a>
               <a href={siteData.contact.email} target="blank" className="font-bold ">
                 <span  className="p-0 text-xl">
-                  <i><FontAwesomeIcon icon={faEnvelope} /></i>
+                  <i><LineIcon name='envelope' /></i>
                 </span>
               </a>
               <a href={siteData.contact.telegram} target="blank" className="font-bold ">
                 <span  className="p-0 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'telegram']} /></i>
+                  <i><LineIcon name='telegram'/></i>
                 </span>
               </a>
             </div>
 
             <a href="javascript:void(0)" onClick={closeNav}  style={{marginTop:'5%'}}  className="text-xl font-bold contents closebtn">
-              <i className=" has-text-dark is-size-3"><FontAwesomeIcon icon={faAngleDown} /></i>
+              <i className=" has-text-dark is-size-3"><LineIcon /></i>
             </a>
           </div>
         </div>

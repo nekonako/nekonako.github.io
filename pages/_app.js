@@ -2,22 +2,13 @@ import '../styles/tailwind.css'
 import '../styles/global.css'
 import '../styles/prism-theme.css'
 import Head from 'next/head'
-import siteData from '../site-data'
 import { ThemeProvider } from "../components/ThemeContext"
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
-
-fun
 
 function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <script data-ad-client="ca-pub-7003687861515202"
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"> </script>
-                </script>
-                <meta name='application-name' content='nekonako' />
+               <meta name='application-name' content='nekonako' />
                 <meta name='apple-mobile-web-app-capable' content='yes' />
                 <meta name='apple-mobile-web-app-status-bar-style' content='default' />
                 <meta name='format-detection' content='telephone=no' />
@@ -26,7 +17,6 @@ function MyApp({ Component, pageProps }) {
                 <meta name='msapplication-TileColor' content='#25293A' />
                 <meta name='msapplication-tap-highlight' content='no' />
                 <meta name='theme-color' content='#25293A' />
-
                 <link rel='apple-touch-icon' sizes='180x180' href='/assets/icon192.png' />
                 <link rel='icon' type='image/png' sizes='32x32' href='/assets/icon192.png' />
                 <link rel='icon' type='image/png' sizes='16x16' href='/assets/icon192.png' />

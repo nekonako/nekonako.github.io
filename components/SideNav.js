@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import ThemeToggle from './ThemeToggle'
 import siteData from '../site-data'
-library.add(fab)
+import dynamic from 'next/dynamic'
+import ThemeToggle from './ThemeToggle'
+const LineIcon = dynamic(
+   () => import('react-lineicons'),
+   {ssr : false}
+)
+
 
 function SideNav(){
   return(
@@ -19,7 +20,7 @@ function SideNav(){
             <div className="block pt-6 pb-8 m-1 text-center" >
               <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="150px" className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"8px"}}/>
             </div>
-            <div className="text-3xl font-bold text-center latin">Galih wisnuaji</div>
+            <div className="text-3xl font-bold text-center latin">Nekonako</div>
             <div className="font-light text-center latin">Penikmat kopi dan drama</div>
 
             <ul className="pt-8 pb-4 text-center ">
@@ -47,22 +48,22 @@ function SideNav(){
             <center className="pt-4">
               <a href={siteData.contact.github} target="blank" className="font-bold">
                 <span className="p-3 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'github']} /></i>
+                  <i><LineIcon name='github'/></i>
                 </span>
               </a>
               <a href={siteData.contact.twitter} target="blank" className="font-bold">
                 <span  className="p-3 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'twitter']} /></i>
+                  <i><LineIcon name ='twitter' /></i>
                 </span>
               </a>
               <a href={siteData.contact.email} target="blank" className="font-bold">
                 <span  className="p-3 text-xl">
-                  <i><FontAwesomeIcon icon={faEnvelope} /></i>
+                  <i><LineIcon name='envelope' /></i>
                 </span>
               </a>
               <a href={siteData.contact.telegram} target="blank" className="font-bold">
                 <span  className="p-3 text-xl">
-                  <i><FontAwesomeIcon icon={['fab', 'telegram']} /></i>
+                  <i><LineIcon name='telegram' /></i>
                 </span>
               </a>
             </center>          </div>
