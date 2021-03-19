@@ -58,7 +58,7 @@ function Navbar() {
             </div>
 
             <a href="javascript:void(0)" onClick={closeNav}  style={{marginTop:'5%'}}  className="text-xl font-bold contents closebtn">
-              <i className=" has-text-dark is-size-3"><LineIcon /></i>
+              <i className=" has-text-dark is-size-3"><LineIcon name='chevron-down'/></i>
             </a>
           </div>
         </div>

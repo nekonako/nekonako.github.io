@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import siteData from '../site-data'
 import tempe from 'tempe';
 
 function Posts({props}) {
