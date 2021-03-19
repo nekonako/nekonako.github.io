@@ -10,7 +10,7 @@ const LineIcon = dynamic(
 export default function Card({ id, title, tags, desc, date, slug }){
    return(
       <>
-         <div  key={id} className='md:m-4 overflow-hidden rounded-lg bg-secondary'>
+         <div  key={id} className='my-4 md:m-4 overflow-hidden rounded-lg bg-secondary'>
             <div className='p-4'>
                <div>
                   <div className='text-xl font-extrabold'>
