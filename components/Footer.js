@@ -5,7 +5,7 @@ function Footer () {
    return(
       <>
          <div className='pt-4 pb-10 mt-8 text-sm text-center bg-secondary md:text-base footer'>
-            <div className='md:hidden my-4'>
+            <div className='md:hidden mb-4'>
             <ThemeToggle/>
             </div>
             <div className="md:pt-4" ></div>
