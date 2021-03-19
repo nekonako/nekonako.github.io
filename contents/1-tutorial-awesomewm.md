@@ -79,6 +79,7 @@ Diatas kita membuat variabel `text_hello_world` yang didalamnya ada objek (di lu
 tapi agar lebih familiar kita sebut objek saja), dengan properties `text`, `font` dan `widget`.
 properties `widget` berisi method `wibox.widget.textbox`, karena kita akan menampilkan text.
 
+<br/>
 
 memasukan widget ke dalam wibox
 
@@ -179,6 +180,8 @@ number:buttons(awful.button({}, 1, function() increment() end))
 tanda **":"** didalam lua merupakan syntax sugar dari method yang parameter pertamanya adalah
 dirinya sendiri.
 
+<br/>
+
 contoh :
 
 ```lua
@@ -191,8 +194,8 @@ self:hello("hello_world")
 Didalam method buttons kita menggunakan method **awful.button** sebagai parameter kedua.
 
 
-Oh iya kalau kita perhatikan saat kita membuat toggle untuk memuncukan widget kita mengisi parameter
-pertama pada method **awful.button dengan** **{Mod4}** dan parameter kedua adalah huruf "y".
+Oh iya kalau kita perhatikan saat kita membuat toggle untuk memuncukan widget, kita mengisi parameter
+pertama pada method **awful.button** dengan **{"Mod4"}** dan parameter kedua adalah huruf "y".
 Karena kita tidak ingin menggunakan shortcut melainkan mouse maka parameter pertama cukup kita
 kasih objek kosong sedangkan parameter kedua kita isi dengan angka 1. 
 Kenapa angka 1 ? apakah angka 1 punya maksud tertentu ? jawabanya iya.
