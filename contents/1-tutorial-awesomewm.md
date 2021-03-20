@@ -104,7 +104,6 @@ local wibox = require('wibox')
 local hello_world = wibox {
    height = 500,
    width = 500,
-   bg = '#2A2C3A',
    visible = true
 }
 
@@ -133,7 +132,6 @@ local awful = require('awful')
 local hello_world = wibox {
    height = 500,
    width = 500,
-   bg = '#2A2C3A',
 -- set visible menjadi false
    visible = false
 }
@@ -185,10 +183,10 @@ dirinya sendiri.
 contoh :
 
 ```lua
-self.hello(self, "hellow world")
+self.hello(self, "hello world")
 
 -- sama dengan
-self:hello("hello_world")
+self:hello("hello world")
 ```
 
 Didalam method buttons kita menggunakan method **awful.button** sebagai parameter kedua.
