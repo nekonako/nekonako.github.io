@@ -5726,6 +5726,13 @@ prismjs@^1.22.0:
   optionalDependencies:
     clipboard "^2.0.0"
 
+prismjs@^1.23.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
+  optionalDependencies:
+    clipboard "^2.0.0"
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -6051,10 +6058,10 @@ remark-parse@^9.0.0:
   dependencies:
     mdast-util-from-markdown "^0.8.0"
 
-remark-prism@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/remark-prism/-/remark-prism-1.3.3.tgz#897cfb218847502f6c14a303f8518fb4768475cd"
-  integrity sha512-A5kQWm1su6rAzcE9e84nA2GLqIETxf+vfGpv1f0SLk0AVAb02+G09koDlIPcP9NdTvQ7xM/4lUn4r4FFDH/HHg==
+remark-prism@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/remark-prism/-/remark-prism-1.3.4.tgz#3c15b008c8904ac4e96b988eb1d5a7ae54ce0dbe"
+  integrity sha512-/yx8giUBhhmYfgOj27ewh+P5BPymBQaW7p4JUFNL9uaW5pDpu2Z6ODjMEpk7D0w77eGpd96+DXmhitjHxsX1Dg==
   dependencies:
     classnames "^2.2.6"
     css-selector-parser "^1.4.1"
@@ -6063,7 +6070,7 @@ remark-prism@^1.3.3:
     parse-numeric-range "^1.2.0"
     parse5 "^6.0.1"
     parse5-htmlparser2-tree-adapter "^6.0.1"
-    prismjs "^1.22.0"
+    prismjs "^1.23.0"
     unist-util-map "^2.0.1"
 
 remove-trailing-separator@^1.0.1:
