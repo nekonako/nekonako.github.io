@@ -31,7 +31,7 @@ function Navbar() {
         <div id="sideNav" className="flex flex-col justify-center inline-block w-full text-center mt-14 bg-primary sidenav">
           <div className="sidenav-content">
             <Link href="/">Home</Link>
-            <Link href="/posts">Articles</Link>
+            <Link href="/projects">Projects</Link>
             <Link href="/friends">friends</Link>
             <Link href="/about">About</Link>
             <div style={{marginTop:"20%"}} className="flex flex-row items-center justify-center inline-block align-middle">
@@ -57,7 +57,7 @@ function Navbar() {
               </a>
             </div>
 
-            <a href="javascript:void(0)" onClick={closeNav}  style={{marginTop:'5%'}}  className="text-xl font-bold contents closebtn">
+            <a onClick={closeNav}  style={{marginTop:'5%'}}  className="text-xl font-bold contents closebtn">
               <i className=" has-text-dark is-size-3"><LineIcon name='chevron-down'/></i>
             </a>
           </div>

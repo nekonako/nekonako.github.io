@@ -18,10 +18,10 @@ function SideNav(){
           </div>
           <div className='w-full p-0 m-0'>
             <div className="block pt-6 pb-8 m-1 text-center" >
-              <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="150px" className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"8px"}}/>
+              <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="180px" className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"8px"}}/>
             </div>
             <div className="text-3xl font-bold text-center latin">Nekonako</div>
-            <div className="font-light text-center latin">Penikmat kopi dan drama</div>
+            <div className="font-light text-center latin">Coffe and Code enjoyer</div>
 
             <ul className="pt-8 pb-4 text-center ">
               <li className="p-2">
@@ -30,13 +30,13 @@ function SideNav(){
                 </Link>
               </li>
               <li className="p-2">
-                <Link href="/posts" className="font-bold">
-                  Articles
+                <Link href="/projects" className="font-bold">
+                  Projects
                 </Link>
               </li>
               <li className="p-2">
                 <Link href="/friends" className="font-bold">
-                  Friends
+                  .Friends
                 </Link>
               </li>
               <li className="p-2">

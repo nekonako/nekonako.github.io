@@ -7,28 +7,42 @@ const LineIcon = dynamic(
    {ssr : false}
 )
 
-export default function Card({ id, title, tags, desc, date, slug }){
+export default function Card({ title, link, source, tags, desc, date, slug, image }){
    return(
       <>
-         <div  key={id} className='my-4 md:m-4 overflow-hidden rounded-lg bg-secondary'>
+         <div className='overflow-hidden rounded-lg bg-secondary'>
+            <img src={image} />
             <div className='p-4'>
-               <div>
-                  <div className='text-xl font-extrabold'>
+               <div className='text-xl font-bold'>
+                  { source == null ? (
                      <Link href={'post/' + slug}>
                         {title}
                      </Link>
-                  </div>
-                  <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
-                     <span className='text-xs text-secondary'>
-                        <LineIcon name='calendar'/>
-                        {tempe(date).format(" d, DD MMMM YYYY")}
-                     </span>
-                  </div>
-                  <div className='pb-4 text-secondary'>
-                     {desc}
-                  </div>
-                  {tags}
+                  ) : title }
                </div>
+               <div className='flex flex-row pt-2 pb-2 mb-2 text-secondary postBorder'>
+                  <span className='text-xs text-secondary'>
+                     <LineIcon name='calendar'/>
+                     {tempe(date).format(" d, DD MMMM YYYY")}
+                  </span>
+               </div>
+               <div className='pb-4 text-secondary'>
+                  {desc}
+               </div>
+               {tags}
+               {source != null ? (
+               <div className='flex flex-row justify-between mt-2'>
+                  <div></div>
+                  <div>
+                     <a className='bg-primary px-2 py-1 mr-2' href={source}>
+                        <LineIcon name='github' />
+                     </a>
+                     <a className='bg-primary px-2 py-1' href={link}>
+                        <LineIcon name='firefox' />
+                     </a>
+                  </div>
+               </div>
+               ) : null}
             </div>
          </div>
          </>

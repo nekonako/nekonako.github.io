@@ -4,13 +4,13 @@ import Card from '../components/Card.js'
 import Layout from '../components/Layout.js'
 import Head from 'next/head'
 import siteData from '../site-data'
-import { getAllPosts } from '../lib/api.js'
+import { getAllProjects } from '../lib/api.js'
 
-function IndexPage({ allArtikel }){
+function Projects({ allProjects }){
    return(
       <>
          <Head>
-            <title>Home | {siteData.name}</title>
+            <title>Projects | {siteData.name}</title>
             <meta name='apple-mobile-web-app-title' content='Nekonako' />
             <meta name='description' content='Nako Personal Website' />
             <meta property='og:title' content='nekonako' />
@@ -20,39 +20,42 @@ function IndexPage({ allArtikel }){
          <Navbar />
          <SideNav />
          <Layout>
-            <div className='m-4 text-2xl font-bold'>Articles</div>
-            {allArtikel.map((post)=>{
-               return (
-                  <div className='m-4'>
+            <div className='m-4 md:m-6 text-2xl font-bold'>Projects</div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-4 gap-4'>
+               {allProjects.map((project, index)=>{
+                  return (
                      <Card
-                        title={post.title}
-                        desc={post.desc}
-                        slug={post.slug}
-                        date={post.date}
-                        tags={post.tags.map((tag,index) => {
+                        image={project.image}
+                        title={project.title}
+                        desc={project.desc}
+                        slug={project.slug}
+                        date={project.date}
+                        tags={project.tags.map((tag) => {
                            return (
-                              <div key={index}>
+                              <>
                                  <span className='px-2 mr-1 text-base
                                     text-gray-800 rounded-sm bg-accent'>{tag}
                                  </span>
-                                 </div>
+                                 </>
                            )
                         })}
+                        source = { project.source }
+                        link = { project.link }
                         />
-                     </div>
-               );
-            })
-            }
+                  );
+               })
+               }
+            </div>
          </Layout>
          </>
    )
 }
 
 export async function getStaticProps() {
-   const allArtikel = getAllPosts([ 'title', 'desc', 'tags', 'date', 'slug'  ])
+   const allProjects = getAllProjects([ 'title', 'desc', 'tags', 'date', 'slug', 'source', 'link', 'image'  ])
    return {
-      props : { allArtikel }
+      props : { allProjects }
    }
 }
 
-export default IndexPage
+export default Projects
