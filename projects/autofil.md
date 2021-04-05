@@ -2,7 +2,7 @@
 title : 'autofil'
 slug : 'jasabase'
 date : '2021-1-2'
-desc: 'Project website for my brother made with nextjs'
+desc: 'Website project for my brother, made with nextjs'
 tags:
   - nextjs
   - react
