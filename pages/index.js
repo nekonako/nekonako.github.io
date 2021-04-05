@@ -31,11 +31,11 @@ function IndexPage({ allArtikel }){
                         date={post.date}
                         tags={post.tags.map((tag,index) => {
                            return (
-                              <div key={index}>
+                              <>
                                  <span className='px-2 mr-1 text-base
                                     text-gray-800 rounded-sm bg-accent'>{tag}
                                  </span>
-                                 </div>
+                                 </>
                            )
                         })}
                         />
