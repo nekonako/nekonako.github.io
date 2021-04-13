@@ -20,8 +20,8 @@ function SideNav(){
             <div className="block pt-6 pb-8 m-1 text-center" >
               <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="180px" className="relative inline-block rounded-full text-accent border-current" style={{borderWidth:"8px"}}/>
             </div>
-            <div className="text-3xl font-bold text-center latin">Nekonako</div>
-            <div className="font-light text-center latin">Coffe and Code enjoyer</div>
+            <div className="text-3xl font-bold text-center latin">Galih wisnuaji</div>
+            <div className="font-light text-center latin">Coffe and Code</div>
 
             <ul className="pt-8 pb-4 text-center ">
               <li className="p-2">
