@@ -29,7 +29,7 @@ function IndexPage({ allArtikel }){
                         desc={post.desc}
                         slug={post.slug}
                         date={post.date}
-                        tags={post.tags.map((tag,index) => {
+                        tags={post.tags.map((tag) => {
                            return (
                               <>
                                  <span className='px-2 mr-1 text-base

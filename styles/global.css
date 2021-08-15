@@ -81,6 +81,7 @@ pre code {
    font-family:'JetBrains Mono', monospace;
    color: var(--color-text-secondary);
    white-space: pre;
+    font-size: 0.9rem !important;
    font-weight: normal !important;
 }
 

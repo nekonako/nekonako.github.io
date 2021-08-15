@@ -2,6 +2,7 @@ import * as React from 'react'
 import dynamic from 'next/dynamic'
 import tempe from 'tempe'
 import Link from 'next/link'
+
 const LineIcon = dynamic(
    () => import('react-lineicons'),
    {ssr : false}
