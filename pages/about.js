@@ -26,17 +26,20 @@ function About() {
               <span className="text-accent"># </span>
               Hello everyone
             </div>
-            My name is galih wisnuaaji, a 19 year old boy from Pekalongan,
-            Indonesia.
-            <br />I am a linux enthusiast and coder with lua and javascript as
-            the main programming language
+            My name is Galih Wisnuaaji, 19 year old boy from Pekalongan,
+            Indonesia. ordinary people, coffe and drama enjoyer.
+            <br /> - love linux
+            <br /> - love programming
+            <br /> - love cooking, not delicious but but i think ... uh i dont
+            know :D
+            <br /> - weebs too
             <div className="pt-8 text-2xl font-bold">
               <span className="text-accent"># </span>
               Contact
             </div>
-            <a href="mailto:code.yuune@gmail.com" rel="external noopener">
-              ne.nekonako@gmail.com
-            </a>
+             - ne.nekonako@gmail.com
+            <br /> - t.me/nekonakoo
+            <br/> - github.com/nekonako
           </div>
           <Footer />
         </main>

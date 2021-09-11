@@ -74,14 +74,14 @@ pre {
 }
 code {
    color:  var(--color-text-accent);
-   font-size: 0.9rem !important;
+   font-size: 0.8rem !important;
 }
 
 pre code {
    font-family:'JetBrains Mono', monospace;
    color: var(--color-text-secondary);
    white-space: pre;
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
    font-weight: normal !important;
 }
 
