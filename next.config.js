@@ -22,6 +22,6 @@ module.exports = withPWA({
 
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = {
-  assetPrefix: isProd ? '/nekonako.github.io/' : ''
-}
+// module.exports = {
+//   assetPrefix: isProd ? '/nekonako.github.io/' : ''
+// }
