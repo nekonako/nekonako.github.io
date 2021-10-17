@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Use yarn
+        run: npm i -g yarn
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -34,9 +36,9 @@ jobs:
 
       - name: Build
         run: |
-          npm i
-          npm run build
-          npm run export
+          yarn install
+          yarn build
+          yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

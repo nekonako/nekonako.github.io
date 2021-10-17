@@ -21,9 +21,9 @@ function IndexPage({ allArtikel }){
          <SideNav />
          <Layout>
             <div className='m-4 text-2xl font-bold'>Articles</div>
-            {allArtikel.map((post)=>{
+            {allArtikel.map((post, index)=>{
                return (
-                  <div className='m-4'>
+                  <div className='m-4' key={index}>
                      <Card
                         title={post.title}
                         desc={post.desc}
