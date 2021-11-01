@@ -26,12 +26,11 @@ function About() {
               <span className="text-accent"># </span>
               Hello everyone
             </div>
-            My name is Galih Wisnuaaji, 19 year old boy from Pekalongan,
-            Indonesia. ordinary people, coffe and drama enjoyer.
+            My name is Galih Wisnuaaji, I'm currently 20 year old from Pekalongan,
+            Indonesia.
             <br /> - love linux
             <br /> - love programming
-            <br /> - love cooking, not delicious but but i think ... uh i dont
-            know :D
+            <br /> - love cooking ( sometimes i think i'm more passionate in this stuff than coding :D )
             <br /> - weebs too
             <div className="pt-8 text-2xl font-bold">
               <span className="text-accent"># </span>
