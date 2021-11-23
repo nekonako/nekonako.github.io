@@ -1,8 +1,8 @@
 ---
-title : 'info covid 19'
+title : 'covid-ingfo'
 slug : 'covid-ingfo'
 date : '2021-3-25'
-desc: 'Info covid 19 menggunakan mathdroid covid19 API'
+desc: 'website untuk melihat kasus covid 19 diseluruh dunia, menggunakan mathdroid covid19 API'
 tags:
   - API
   - nextjs

@@ -2,8 +2,6 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SideNav from '../../components/SideNav'
-import tempe from 'tempe'
-import siteData from '../../site-data'
 import Head from 'next/head'
 import {DiscussionEmbed} from "disqus-react"
 

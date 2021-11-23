@@ -31,7 +31,7 @@ function About() {
             <br /> - love linux
             <br /> - love programming
             <br /> - love cooking ( sometimes i think i'm more passionate in this stuff than coding :D )
-            <br /> - weebs too
+            <br /> - weebs
             <div className="pt-8 text-2xl font-bold">
               <span className="text-accent"># </span>
               Contact
