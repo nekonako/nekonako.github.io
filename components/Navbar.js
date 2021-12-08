@@ -23,7 +23,7 @@ function Navbar() {
           <a href="https://github.com/nekonako">
             <img src="https://avatars.githubusercontent.com/u/46141275" alt="nekonako" width="32px" className="border-2 rounded-full text-accent border-current"/>
           </a>
-          <span className="text-2xl font-bold"><Link href="/" >Nekonako</Link></span>
+          <span className="text-2xl font-bold"><Link href="/" >nekonako</Link></span>
           <a onClick={openNav} className="md:hidden" data-target="navMenu">
             <i className="font-bold"><LineIcon name='menu'/></i>
           </a>
