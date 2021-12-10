@@ -17,9 +17,9 @@ export default function Card({
 }) {
   return (
     <>
-      <div className="overflow-hidden rounded-lg bg-secondary">
+      <div className="overflow-hidden p-2 rounded-lg bg-secondary">
         <img src={image} />
-        <div className="p-4">
+        <div className="p-2">
           <div className="text-xl font-bold">
             {source == null ? (
               <Link href={'post/' + slug}>{title}</Link>

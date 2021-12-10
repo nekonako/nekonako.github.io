@@ -21,7 +21,7 @@ function Projects({ allProjects }){
          <SideNav />
          <Layout>
             <div className='m-4 md:m-6 text-2xl font-bold'>Projects</div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-4 gap-4'>
+            <div className='grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 m-4 gap-4'>
                {allProjects.map((project)=>{
                   return (
                      <Card

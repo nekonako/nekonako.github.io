@@ -11,7 +11,7 @@ const LineIcon = dynamic(
 function SideNav(){
   return(
     <>
-      <div className="z-10 invisible hidden w-1/3 bg-secondary md:visible md:inline-block" style={{borderRight:'1px solid var(--color-text-gray)',borderColor:'text-gray'}}>
+      <div className="z-10 invisible hidden w-1/3 bg-secondary md:visible md:inline-block">
         <div className="sticky top-0 left-0 flex flex-col justify-center min-h-screen">
           <div className="absolute top-0 left-0 inline-block px-2 m-4 text-lg">
             <ThemeToggle />

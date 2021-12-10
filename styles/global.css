@@ -3,13 +3,13 @@
 }
 
 .dark {
---color-bg-primary : #292D3E;
---color-bg-secondary : #25293A;
---color-bg-accent : #C792EA;
+--color-bg-primary : #131a1c;
+--color-bg-secondary : #1b2224;
+--color-bg-accent : #6bb05d;
 
---color-text-primary: #e3e3ff;
+--color-text-primary: #c5c8c9;
 --color-text-secondary: #CFCFEF;
---color-text-accent:  #C792EA;
+--color-text-accent: #e74c4c;
 --color-text-gray: #52576A;
 }
 .light {
@@ -67,7 +67,7 @@ a:hover {
    color: var(--color-text-accent)
 }
 pre {
-   border-top: 5px solid;
+   border-top: 0px solid;
    border-color:  var(--color-text-accent);
    margin-top: 1rem !important;
    margin-top: 1rem !important;
