@@ -1,7 +1,6 @@
 const withReactSvg = require('next-react-svg')
 const path = require('path')
 const withPWA = require('next-pwa')
-const withCSS = require('@zeit/next-css');
 
 module.exports = withReactSvg({
   include : path.resolve(__dirname, 'public/assets/icon'),
@@ -20,8 +19,8 @@ module.exports = withPWA({
   }
 })
 
-// const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
-// // module.exports = {
-// //   assetPrefix: isProd ? '/nekonako.github.io/' : ''
-// // }
+module.exports = {
+  assetPrefix: isProd ? '/nekonako.github.io/' : ''
+}
