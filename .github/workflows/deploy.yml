@@ -36,9 +36,9 @@ jobs:
 
       - name: Build
         run: |
-          yarn install
-          yarn build
-          yarn export
+          npm run install
+          npm run build
+          npm run export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
